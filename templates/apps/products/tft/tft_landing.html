@@ -1,0 +1,19 @@
+{% extends "templates/base.html" %}
+{% load staticfiles %}
+
+{% block extraHeader %}
+  <!-- extra CSS -->
+{% endblock %}
+
+{% block slideshow %}
+    {% include 'templates/apps/products/tft/_slideshow_tft.html' %}
+{% endblock %}
+
+{% block content %}
+    {% include 'templates/apps/products/tft/_section_intro.html' %}
+{% endblock %}
+
+{% block ending_scripts %}
+<!-- custom scripts for THIS page -->
+<!-- <script type="text/javascript" src="{% static 'js/scriptIndex.js' %}"></script> -->
+{% endblock %}

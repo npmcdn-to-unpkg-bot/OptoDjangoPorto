@@ -1,0 +1,31 @@
+{% extends "templates/base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+    Welcome
+{% endblock %}
+
+{% block extraHeader %}
+  <!-- extra CSS -->
+{% endblock %}
+
+{% block slideshow %}
+    {% include 'templates/apps/static_pages/landing_page/_1_slideshow.html' %}
+{% endblock %}
+
+{% block teaser %}
+    {% include 'templates/apps/static_pages/landing_page/_2_teaser.html' %}
+{% endblock %}
+
+{% block content %}
+    {% include 'templates/apps/static_pages/landing_page/_3_whoweare.html' %}
+    {% include 'templates/apps/static_pages/landing_page/_4_services.html' %}
+    {% include 'templates/apps/static_pages/landing_page/_5_section.html' %}
+    {% include 'templates/apps/static_pages/landing_page/_6_section.html' %}
+    {% include 'templates/apps/static_pages/landing_page/_7_section.html' %}
+{% endblock %}
+
+{% block ending_scripts %}
+<!-- custom scripts for THIS page -->
+<!-- <script type="text/javascript" src="{% static 'js/scriptIndex.js' %}"></script> -->
+{% endblock %}

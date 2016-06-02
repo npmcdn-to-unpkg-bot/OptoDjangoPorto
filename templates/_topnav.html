@@ -1,0 +1,236 @@
+{% load staticfiles %}
+<header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": true}'>
+	<div class="header-body">
+		<div class="header-container container">
+			<div class="header-row">
+				<div class="header-column">
+					<div class="header-logo">
+						<a href="{% url 'landing-page' %}">
+							<img alt="OPTO Logic TECHNOLOGY" width="265" height="54" data-sticky-width="197" data-sticky-height="40" data-sticky-top="33" src="{% static 'media/img/logo_opto.png' %}">
+						</a>
+					</div>
+				</div>
+				<div class="header-column">
+					<div class="header-row">
+						<div class="header-search hidden-xs">
+							<form id="searchForm" action="page-search-results.html" method="get">
+								<div class="input-group">
+									<input type="text" class="form-control" name="q" id="q" placeholder="Search..." required>
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+									</span>
+								</div>
+							</form>
+						</div>
+						<nav class="header-nav-top">
+							<ul class="nav nav-pills">
+								<li class="hidden-xs">
+									<a href="{% url 'about_us' %}"><i class="fa fa-angle-right"></i> About Us</a>
+								</li>
+								<li class="hidden-xs">
+									<a href="contact-us.html"><i class="fa fa-angle-right"></i> Contact Us</a>
+								</li>
+								<li>
+									<a href="#" class="dropdown-menu-toggle" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+										<img src="{% static 'media/img/blank.gif' %}" class="flag flag-gb" alt="English" /> English
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownLanguage">
+										<li><a href="#"><img src="{% static 'media/img/blank.gif' %}" class="flag flag-gb" alt="English" /> English</a></li>
+										<li><a href="#"><img src="{% static 'media/img/blank.gif' %}" class="flag flag-fr" alt="Français" /> Français</a></li>
+										<li><a href="#"><img src="{% static 'media/img/blank.gif' %}" class="flag flag-de" alt="Deutch" /> Deutch</a></li>
+									</ul>
+								</li>
+								<li class="hidden-xs">
+									<span class="ws-nowrap"><i class="fa fa-phone"></i> +41 21 948 20 80 </span>
+								</li>
+								<li class="hidden-xs">
+									<span class="ws-nowrap"><i class="fa fa-fax"></i> +41 21 948 20 88 </span>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header-row">
+						<div class="header-nav">
+							<button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
+								<i class="fa fa-bars"></i>
+							</button>
+							<ul class="header-social-icons social-icons hidden-xs">
+								<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+								<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+								<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+							<div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+								<nav>
+									<ul class="nav nav-pills" id="mainNav">
+										<li class="dropdown active">
+											<a class="dropdown-toggle" href="index.html">
+												Product
+											</a>
+											<ul class="dropdown-menu">
+												<li class="dropdown-submenu">
+													<a href="#">Displays</a>
+													<ul class="dropdown-menu">
+														<li><a href="{% url 'tft' %}">TFT</a></li>
+														<li class="dropdown-submenu">
+															<a href="#">LCD</a>
+															<ul class="dropdown-menu">
+																<li><a href="#">LCD Module</a></li>
+																<li><a href="#">LCD Segment</a></li>
+															</ul>
+														</li>
+														<li><a href="#">OLED</a></li>
+														<li><a href="#">ePAPER</a></li>
+														<li><a href="#">Custom solution</a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a href="#">Thermal Printers</a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Panel Printer</a></li>
+														<li><a href="#">Mobile Printer</a></li>
+														<li><a href="#">POS Printer</a></li>
+														<li><a href="#">Mechanism</a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a href="#">Touch Panels</a>
+													<ul class="dropdown-menu">
+														<li><a href="#">PCAP</a></li>
+														<li><a href="#">RTP</a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a href="#">Touch Panels</a>
+													<ul class="dropdown-menu">
+														<li><a href="#">PCAP</a></li>
+														<li><a href="#">RTP</a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a href="#">Computers</a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Industrial PC's</a></li>
+														<li><a href="#">Monitors</a></li>
+														<li><a href="#">SOM</a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a href="#">Others</a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Laser Diodes</a></li>
+														<li><a href="#">Pos Systems</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown ">
+											<a class="dropdown-toggle" href="#">
+												Solutions
+											</a>
+											<ul class="dropdown-menu">
+												<li class="dropdown-submenu">
+													<a href="#">Custom</a>
+													<ul class="dropdown-menu">
+														<li><a href="#">We</a></li>
+														<li><a href="#">Develop</a></li>
+														<li><a href="#">Projects</a></li>
+														<li><a href="#">Together</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										</li>
+										<li class="dropdown">
+											<a class="dropdown-toggle" href="#">
+												PARTNERS
+											</a>
+											<ul class="dropdown-menu">
+												<li class="dropdown-submenu">
+													<a href="#">Single Project</a>
+													<ul class="dropdown-menu">
+														<li><a href="portfolio-single-small-slider.html">Small Slider</a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a href="#">Sub Menu</a>
+													<ul class="dropdown-menu">
+														<li><a href="portfolio-grid-1-column.html">1 Column</a></li>
+														<li><a href="portfolio-grid-2-columns.html">2 Columns</a></li>
+														<li><a href="portfolio-grid-3-columns.html">3 Columns</a></li>
+														<li><a href="portfolio-grid-4-columns.html">4 Columns</a></li>
+														<li><a href="portfolio-grid-5-columns.html">5 Columns</a></li>
+														<li><a href="portfolio-grid-6-columns.html">6 Columns</a></li>
+														<li><a href="portfolio-grid-no-margins.html">No Margins</a></li>
+														<li><a href="portfolio-grid-full-width.html">Full Width</a></li>
+														<li><a href="portfolio-grid-full-width-no-margins.html">Full Width No Margins</a></li>
+														<li><a href="portfolio-grid-1-column-title-and-description.html">Title and Description</a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a href="#">Masonry Layouts</a>
+													<ul class="dropdown-menu">
+														<li><a href="portfolio-masonry-2-columns.html">2 Columns</a></li>
+														<li><a href="portfolio-masonry-3-columns.html">3 Columns</a></li>
+														<li><a href="portfolio-masonry-4-columns.html">4 Columns</a></li>
+														<li><a href="portfolio-masonry-5-columns.html">5 Columns</a></li>
+														<li><a href="portfolio-masonry-6-columns.html">6 Columns</a></li>
+														<li><a href="portfolio-masonry-no-margins.html">No Margins</a></li>
+														<li><a href="portfolio-masonry-full-width.html">Full Width</a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a href="#">Sidebar Layouts</a>
+													<ul class="dropdown-menu">
+														<li><a href="portfolio-sidebar-left.html">Left Sidebar</a></li>
+														<li><a href="portfolio-sidebar-right.html">Right Sidebar</a></li>
+														<li><a href="portfolio-sidebar-left-and-right.html">Left and Right Sidebars</a></li>
+														<li><a href="portfolio-sidebar-sticky.html">Sticky Sidebar</a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a href="#">Ajax</a>
+													<ul class="dropdown-menu">
+														<li><a href="portfolio-ajax-page.html">Ajax on Page</a></li>
+														<li><a href="portfolio-ajax-modal.html">Ajax on Modal</a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a href="#">Extra</a>
+													<ul class="dropdown-menu">
+														<li><a href="portfolio-extra-timeline.html">Timeline</a></li>
+														<li><a href="portfolio-extra-lightbox.html">Lightbox</a></li>
+														<li><a href="portfolio-extra-load-more.html">Load More</a></li>
+														<li><a href="portfolio-extra-lazy-load.html">Lazy Load</a></li>
+														<li><a href="portfolio-extra-pagination.html">Pagination</a></li>
+														<li><a href="portfolio-extra-combination-filters.html">Combination Filters</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a class="dropdown-toggle" href="{% url 'about_us' %}">About Us</a>
+											<ul class="dropdown-menu">
+												<li><a href="portfolio-extra-timeline.html">Our Services</a></li>
+												<li><a href="portfolio-extra-timeline.html">Quality</a></li>
+												<li><a href="portfolio-extra-timeline.html">Jobs</a></li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a class="dropdown-toggle" href="#">
+												Support
+											</a>
+											<ul class="dropdown-menu">
+												<li><a href="{% url 'about_us' %}">About Us</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

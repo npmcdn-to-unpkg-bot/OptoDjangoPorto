@@ -1,0 +1,27 @@
+{% extends "templates/base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+    About us
+{% endblock %}
+
+{% block extraHeader %}
+  <!-- extra CSS -->
+{% endblock %}
+
+{% block slideshow %}
+    {% include 'templates/apps/static_pages/about_us/_1_top_hero.html' %}
+{% endblock %}
+
+{% block content %}
+    {% include 'templates/apps/static_pages/about_us/_2_whoweare.html' %}
+    {% include 'templates/apps/static_pages/about_us/_3_section_rotative_words.html' %}
+    {% include 'templates/apps/static_pages/about_us/_4_guideline.html' %}
+    {% include 'templates/apps/static_pages/about_us/_full.html' %}
+
+{% endblock %}
+
+{% block ending_scripts %}
+<!-- custom scripts for THIS page -->
+<!-- <script type="text/javascript" src="{% static 'js/scriptIndex.js' %}"></script> -->
+{% endblock %}
