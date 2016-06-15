@@ -15,13 +15,18 @@
 
 {% block content %}
     {% include 'templates/apps/static_pages/about_us/_2_whoweare.html' %}
-    {% include 'templates/apps/static_pages/about_us/_3_section_rotative_words.html' %}
-    {% include 'templates/apps/static_pages/about_us/_4_guideline.html' %}
-    {% include 'templates/apps/static_pages/about_us/_full.html' %}
+    {% include 'templates/apps/static_pages/about_us/_3_rotative_words.html' %}
+    {% include 'templates/apps/static_pages/about_us/_4_sector.html' %}
+    {% include 'templates/apps/static_pages/about_us/_5_history.html' %}
+    {% include 'templates/apps/static_pages/about_us/_guideline.html' %}
+
 
 {% endblock %}
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnF6Kt_hRql9eZZ96grbJ6J663J-33lhU&callback=initMap" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobubble/src/infobubble.js"></script>
 {% block ending_scripts %}
+
 <!-- custom scripts for THIS page -->
 <!-- <script type="text/javascript" src="{% static 'js/scriptIndex.js' %}"></script> -->
 {% endblock %}

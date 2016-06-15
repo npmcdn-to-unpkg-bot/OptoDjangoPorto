@@ -1,0 +1,20 @@
+{% extends "templates/base.html" %}
+{% load staticfiles %}
+
+{% block extraHeader %}
+  <!-- extra CSS -->
+{% endblock %}
+
+{% block slideshow %}
+    {% include 'templates/apps/products/custom/_custom_slideshow.html' %}
+{% endblock %}
+
+{% block content %}
+    {% include 'templates/apps/products/custom/_custom_intro.html' %}
+    {% include 'templates/apps/products/custom/_custom_table.html' %}
+{% endblock %}
+
+{% block ending_scripts %}
+<!-- custom scripts for THIS page -->
+<!-- <script type="text/javascript" src="{% static 'js/scriptIndex.js' %}"></script> -->
+{% endblock %}
