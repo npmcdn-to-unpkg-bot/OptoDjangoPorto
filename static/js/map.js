@@ -1,8 +1,3 @@
-{% load staticfiles %}
-<!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
-<div id="map" class="google-map"></div>
-<script type="text/javascript" src="{% static 'js/map.js' %}"></script>
-<script>
 var map;
 function initMap() {
 // Create an array of styles.
@@ -96,5 +91,3 @@ marker.addListener('click', function() {
 infowindow.open(map,marker);
 }
 google.setOnloadCallback(initMap);
-
-</script>

@@ -30,6 +30,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# EMAIL SETTINGs
+
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_PASSWORD = 'dummydummy'  # my gmail password
+EMAIL_HOST_USER = 'optodummy@gmail.com'  # my gmail username
+EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # Application definition
 
@@ -37,6 +46,7 @@ INSTALLED_APPS = [
     'apps.static_pages.landing_page',
     'apps.static_pages.about_us',
     'apps.static_pages.contact_us',
+    'apps.static_pages.contact_us.templatetags',
     'apps.products.tft',
     'apps.products.lcd',
     'apps.products.oled',
@@ -50,6 +60,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'debug_toolbar',
     'django_spaghetti',
 ]
@@ -141,6 +152,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 STATICFILES_DIRS = ( os.path.join(BASE_DIR, 'static'), )
 
 SPAGHETTI_SAUCE = {
-  'apps':['auth','apps.static_pages.landing_page','apps.static_pages.about_us','apps.products.tft'],
-  'show_fields':False,
+  'apps':['auth','tft',],
+  'show_fields':False
+    ,
 }
+
+EMAIL_OPTOLOGIC_SENDER = 'optodummy@gmail.com'
+EMAIL_OPTOLOGIC_RECEIVER = 'optodummy@gmail.com'
