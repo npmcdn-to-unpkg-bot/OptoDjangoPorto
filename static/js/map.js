@@ -1,3 +1,4 @@
+
 var map;
 function initMap() {
 // Create an array of styles.
@@ -60,20 +61,20 @@ var marker = new google.maps.Marker({
 });
 
 var contentString =
-'<div id="content" class="uk-panel" style="">'+
+'<div id="content" class="" style="">'+
     '<h1><strong>OPTO</strong> logic technology</h1>'+
     '<div id="bodyContent">'+
         '<address class="" >'+
             '<br>'+
-            '<div class="uk-grid">'+
-                '<div class=uk-width-1-2>'+
+            '<div class="">'+
+                '<div>'+
                     'Route de Vevey 105<br>'+
                     '1618 Chatel-St-Denis<br>'+
                     'Switzerland<br>'+
                 '</div>'+
-                '<div class=uk-width-1-2>'+
-                    '<a href="tel:+41219482080"><i class="uk-icon-phone"></i>  +41 21 948 20 80</a>  <br>'+
-                    '<a href="tel:+41219482088"><i class="uk-icon-fax"></i> +41 21 948 20 88</a> <br><br>'+
+                '<div class=>'+
+                    '<a href="tel:+41219482080"><i class="fa fa-phone"></i>  +41 21 948 20 80</a>  <br>'+
+                    '<a href="tel:+41219482088"><i class="fa fa-fax"></i> +41 21 948 20 88</a> <br><br>'+
                 '</div>'+
             '</div>'+
         '</address>'+
@@ -91,3 +92,4 @@ marker.addListener('click', function() {
 infowindow.open(map,marker);
 }
 google.setOnloadCallback(initMap);
+
