@@ -1,6 +1,7 @@
 from django.forms import ModelForm
 from .models import Contact
 
+
 class BaseModelForm(ModelForm):
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('auto_id', '%s')

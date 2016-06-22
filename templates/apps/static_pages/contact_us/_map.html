@@ -1,5 +1,6 @@
 {% load staticfiles %}
 <!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
+<!-- TODO bloquer eventuellement le scroll sur la carte google -->
 <div id="map" class="google-map"></div>
 <script type="text/javascript" src="{% static 'js/map.js' %}"></script>
 <script>
@@ -89,5 +90,4 @@ marker.addListener('click', function() {
 infowindow.open(map,marker);
 }
 google.setOnloadCallback(initMap);
-
 </script>
