@@ -43,6 +43,7 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # Application definition
 
 INSTALLED_APPS = [
+    'apps.static_pages.partners',
     'apps.static_pages.landing_page',
     'apps.static_pages.about_us',
     'apps.static_pages.contact_us',
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
     'apps.products.oled',
     'apps.products.epaper',
     'apps.products.custom',
+    'apps.products.solutions',
     'apps.products.thermal_printers.panel_printers',
     'apps.products.thermal_printers.mobile_printers',
     'django.contrib.admin',
@@ -149,12 +151,13 @@ STATIC_URL = '/static/'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
-STATICFILES_DIRS = ( os.path.join(BASE_DIR, 'static'), )
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
+
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, '../static/media/partners_logo')
 
 SPAGHETTI_SAUCE = {
-  'apps':['auth','tft',],
-  'show_fields':False
-    ,
+  'apps': ['auth', 'tft', ],
+  'show_fields': False,
 }
 
 EMAIL_OPTOLOGIC_SENDER = 'optodummy@gmail.com'

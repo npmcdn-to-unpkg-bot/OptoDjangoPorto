@@ -1,6 +1,6 @@
 {% extends "templates/base.html" %}
 {% load staticfiles %}
-
+{% block title %}TFT -{% endblock %}
 {% block extraHeader %}
   <!-- extra CSS -->
 {% endblock %}
@@ -10,8 +10,8 @@
 {% endblock %}
 
 {% block content %}
-    {% include 'templates/apps/products/tft/_section_intro.html' %}
-    {% include 'templates/apps/products/tft/index.html' %}
+    {% include 'templates/apps/products/tft/_tft_intro.html' %}
+    {% include 'templates/apps/products/tft/_tft_list.html' %}
 {% endblock %}
 
 {% block ending_scripts %}

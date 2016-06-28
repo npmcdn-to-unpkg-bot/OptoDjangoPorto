@@ -1,23 +1,45 @@
 {% load staticfiles %}
-<hr>
-<div class="container mb-lg mt-lg">
-    <div class="row">
-        <div class="col-md-6">
-            <img class="img-responsive appear-animation" src="{% static 'media/img/thermal_printer/kiosk_printer/edito-printer-KSM347P-with-loop.png' %}" data-appear-animation="fadeInRight" alt="">
 
+<div class="home-concept mt-xlg mb-xlg">
+    <div class="container">
+
+        <div class="row center">
+            <span class="sun"></span>
+            <span class="cloud"></span>
+            <div class="col-md-2 col-md-offset-1">
+                <div class="process-image appear-animation" data-appear-animation="bounceIn">
+                    <img src="{% static 'media/img/home-concept-item-1.png' %}" alt="" />
+                    <strong>Your wish</strong>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="process-image appear-animation" data-appear-animation="bounceIn" data-appear-animation-delay="200">
+                    <img src="{% static 'media/img/home-concept-item-2.png' %}" alt="" />
+                    <strong>Our Proposal</strong>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="process-image appear-animation" data-appear-animation="bounceIn" data-appear-animation-delay="400">
+                    <img src="{% static 'media/img/home-concept-item-3.png' %}" alt="" />
+                    <strong>Building</strong>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-offset-1">
+                <div class="project-image">
+                    <div id="fcSlideshow" class="fc-slideshow">
+                        <ul class="fc-slides">
+                            <li><a href="portfolio-single-small-slider.html"><img class="img-responsive" src="{% static 'media/img/projects/project-home-1.jpg' %}" alt="" /></a></li>
+                            <li><a href="portfolio-single-small-slider.html"><img class="img-responsive" src="{% static 'media/img/projects/project-home-2.jpg' %}" alt="" /></a></li>
+                            <li><a href="portfolio-single-small-slider.html"><img class="img-responsive" src="{% static 'media/img/projects/project-home-3.jpg' %}" alt="" /></a></li>
+                        </ul>
+                    </div>
+                    <strong class="our-work">Your Product</strong>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 mt-lg">
-            <h2 class="mt-lg"><strong>TFT</strong>Displays</h2>
-            <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci.
-            </p>
-            <p class="mt-lg">
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent scelerisque volutpat turpis, eu hendrerit enim scel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent scelerisque volutpat turpis, eu hendrerit enim scel.
-            </p>
-        </div>
+
     </div>
 </div>
-
 <section class="section section-default section-with-mockup mb-none">
     <div class="container">
         <div class="row">
@@ -42,7 +64,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <img src="{% static 'media/img/thermal_printer/kiosk_printer/edito-printer-KSM347P-with-loop.png' %}" class="img-responsive mockup-landing-page mb-xl appear-animation fadeInDown appear-animation-visible" alt="Porto" data-appear-animation="fadeInDown" data-appear-animation-delay="300" style="animation-delay: 300ms;">
+                <img src="{% static 'media/img/static_pages/landing_page/man_and_rocket.png' %}" class="img-responsive mockup-landing-page mb-xl appear-animation fadeInDown appear-animation-visible" alt="Porto" data-appear-animation="fadeInDown" data-appear-animation-delay="300" style="animation-delay: 300ms;">
             </div>
             <div class="col-md-4">
                 <div class="feature-box feature-box-style-2 mb-xl appear-animation fadeInRight appear-animation-visible" data-appear-animation="fadeInRight" data-appear-animation-delay="300" style="animation-delay: 300ms;">

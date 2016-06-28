@@ -7,7 +7,6 @@
 <hr>
 <div class="container">
 
-
     <h2><strong>TFT</strong> List</h2>
     {% if tft_list_all %}
     <table id="tft_list" class="display table table-striped table-bordered" cellspacing="0" width="100%">
@@ -42,10 +41,9 @@
         </tbody>
     </table>
     <div class="paging"></div>
-{% else %}
+    {% else %}
     <p>No tfts are available.</p>
-{% endif %}
-
+    {% endif %}
 
 </div>
 
@@ -58,7 +56,7 @@
 
 var datatable = new DataTable(document.getElementById('tft_list'), {
     pageSize: 10,
-    filters: ['select', 'select', 'select', false, false, true, 'select'],
+    filters: ['select', 'select', 'select', select, select, true, 'select'],
     sort: '*',
     filterEmptySelect: 'All'
 });

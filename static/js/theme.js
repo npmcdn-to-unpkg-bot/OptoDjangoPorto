@@ -2696,6 +2696,7 @@ window.theme = {};
 
 }).apply(this, [window.theme, jQuery]);
 
+
 // Sticky Header
 (function(theme, $) {
 
