@@ -1,0 +1,103 @@
+{% load staticfiles %}
+{% load contact_filters %}
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="alert alert-success hidden mt-lg" id="contactSuccess">
+                <strong>Success!</strong> Your message has been sent to us.
+            </div>
+
+            <div class="alert alert-danger hidden mt-lg" id="contactError">
+                <strong>Error!</strong> There was an error sending your message.
+                <span class="font-size-xs mt-sm display-block" id="mailErrorMessage"></span>
+            </div>
+            {% if not message_posted %}
+            <h2 class="mb-sm mt-sm"><strong>Contact</strong> Us</h2>
+
+            <form id="contactForm" action="{% url 'contact_us' %}" method="post" novalidate="novalidate">
+                {% csrf_token %}
+                <div class="row">
+
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <label>Your Firstname *</label>
+                            <div data-toggle="tooltip">
+                                {{ form.first_name|addcss:"form-control" }} {{ form.first_name.errors }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Your Lastname *</label>
+                            <div data-toggle="tooltip">
+                                {{ form.last_name|addcss:"form-control" }} {{ form.last_name.errors }}
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                            <label>Your email address *</label>
+                            <div data-toggle="tooltip" title="Enter your Email address">{{ form.email|addcss:"form-control" }}</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label>Subject</label>
+                            <div data-toggle="tooltip" title="Enter your subject">{{ form.subject|addcss:"form-control" }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label>Message *</label>
+                            <div data-toggle="tooltip" title="Type your message here.">{{ form.message|addcss:"form-control" }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button value="send" type="submit" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading...">
+                            Send Message <i class="fa fa-envelope-o"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            {% else %}
+                <!-- TODO review bloc message thank you (more fun) -->
+                <div><h4 class="heading-primary mt-lg">Thank you <strong>{{ firstname }}</strong>.</h4></div>
+            {% endif %}
+        </div>
+        <div class="col-md-6">
+
+            <h4 class="heading-primary mt-lg">Get in <strong>Touch</strong></h4>
+            <!-- TODO review this text -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <hr>
+
+            <h4 class="heading-primary">The <strong>Office</strong></h4>
+            <ul class="list list-icons list-icons-style-3 mt-xlg">
+                <!-- TODO microdata for address and phone links -->
+                <li><i class="fa fa-map-marker"></i> <strong>Address:</strong><br> Route de Vevey 105<br>
+                    1618 Chatel-St-Denis<br>
+                    Switzerland<br></li>
+                <li><i class="fa fa-phone"></i> <strong>Phone:</strong> <a href="tel:+41219482080">  +41 21 948 20 80</a></li>
+                <li><i class="fa fa-fax"></i> <strong>Fax:</strong> <a href="tel:+41219482088"> +41 21 948 20 88</a></li>
+                <li><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:info@optologic.cch">info@optologic.ch</a></li>
+            </ul>
+
+            <hr>
+
+            <h4 class="heading-primary">Business <strong>Hours</strong></h4>
+            <ul class="list list-icons list-dark mt-xlg">
+                <li><i class="fa fa-clock-o"></i> Monday - Friday 8:30 to 18:00</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>

@@ -7892,7 +7892,8 @@ ul.history li .featured-box .box-content {
 /* Maps */
 .google-map {
 	background: #E5E3DF;
-	height: 400px;
+	height: 50%;
+	min-height: 600px;
 	margin: -35px 0 30px 0;
 	width: 100%;
 }

@@ -1,9 +1,4 @@
-{% load staticfiles %}
-<!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
-<!-- TODO bloquer eventuellement le scroll sur la carte google -->
-<div id="map" class="google-map"></div>
-<script type="text/javascript" src="{% static 'js/map.js' %}"></script>
-<script>
+
 var map;
 function initMap() {
 // Create an array of styles.
@@ -41,10 +36,10 @@ var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
 // Create a map object, and include the MapTypeId to add
 // to the map type control.
 var mapOptions = {
-    zoom: 10,
-    center: new google.maps.LatLng(46.539784, 6.899787),
+    zoom: 11,
+    center: new google.maps.LatLng(46.523445, 6.899624),
     mapTypeControlOptions: {
-        mapTypeIds: []
+        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
     }
 };
 var map = new google.maps.Map(document.getElementById('map'),
@@ -67,14 +62,21 @@ var marker = new google.maps.Marker({
 
 var contentString =
 '<div id="content" class="" style="">'+
-    '<p class="m-none text-md center"><strong>OPTO Logic Technology S.A.</strong></p>'+
-    '<div class="" id="bodyContent">'+
-        '<address class=" m-none" >'+
-            'Route de Vevey 105<br>'+
-            'CH-1618 Chatel-St-Denis<br>'+
-            'Switzerland<br>'+
-            '<a href="tel:+41219482080"><i class="fa fa-phone"></i>  +41 21 948 20 80</a>  <br>'+
-            '<a href="tel:+41219482088"><i class="fa fa-fax"></i> +41 21 948 20 88</a> <br>'+
+    '<h1><strong>OPTO</strong> logic technology</h1>'+
+    '<div id="bodyContent">'+
+        '<address class="" >'+
+            '<br>'+
+            '<div class="">'+
+                '<div>'+
+                    'Route de Vevey 105<br>'+
+                    '1618 Chatel-St-Denis<br>'+
+                    'Switzerland<br>'+
+                '</div>'+
+                '<div class=>'+
+                    '<a href="tel:+41219482080"><i class="fa fa-phone"></i>  +41 21 948 20 80</a>  <br>'+
+                    '<a href="tel:+41219482088"><i class="fa fa-fax"></i> +41 21 948 20 88</a> <br><br>'+
+                '</div>'+
+            '</div>'+
         '</address>'+
     '</div>'+
 '</div>';
@@ -90,4 +92,4 @@ marker.addListener('click', function() {
 infowindow.open(map,marker);
 }
 google.setOnloadCallback(initMap);
-</script>
+
