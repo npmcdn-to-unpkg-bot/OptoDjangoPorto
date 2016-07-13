@@ -11,6 +11,6 @@ def index(request):
     year_copyright = datetime.now().strftime('%Y')
     template = loader.get_template('apps/static_pages/partners/partners.html')
     partners = Partner.objects.all()
-    areas = BusinessArea.objects.all()
+    areas = BusinessArea.objects.all().order_by('weight').reverse()
     context = {'user': 'anonymous', 'year_copyright': year_copyright, 'partners' : partners, 'areas': areas }
     return HttpResponse(template.render(context=context, request=request))

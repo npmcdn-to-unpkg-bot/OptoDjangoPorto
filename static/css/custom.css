@@ -1,7 +1,24 @@
+// Class
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Usage as a mixin
+.element {
+  @include center-block;
+}
+
+
 .partnersLogosFilter button.current{
   background-color : #00a79d;
 }
-
+.grid  {
+  border: 1px solid black;
+  margin: 2px 2px 2px 2px;
+  border-style: ridge;
+}
 /* ---- button ---- */
 
 .button {
