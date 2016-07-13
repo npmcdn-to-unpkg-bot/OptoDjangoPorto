@@ -1,15 +1,27 @@
-// external js: masonry.pkgd.js, imagesloaded.pkgd.js
+$(window).load(function(){
+    var $container = $('.partnersLogos');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
 
-// init Isotope
-var grid = document.querySelector('.grid');
+    $('.partnersLogosFilter button').click(function(){
+        $('.partnersLogosFilter .current').removeClass('current');
+        $(this).addClass('current');
 
-var msnry = new Masonry( grid, {
-  itemSelector: '.grid-item',
-  columnWidth: '.grid-sizer',
-  percentPosition: true
-});
-
-imagesLoaded( grid ).on( 'progress', function() {
-  // layout Masonry after each image loads
-  msnry.layout();
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+         });
+         return false;
+    });
 });

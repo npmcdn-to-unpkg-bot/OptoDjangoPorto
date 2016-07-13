@@ -11,11 +11,14 @@ class BusinessArea(models.Model):
 
 class Partner(models.Model):
     name = models.CharField(max_length=75)
-    logo = models.FileField()
+    logo = models.ImageField()
     area = models.ManyToManyField(BusinessArea, related_name='business_area_partner')
 
     def __str__(self):
         return u"{}".format(self.name)
+
+    def get_area(self):
+        return self.area.all()
 
     class Meta:
         ordering = ('name',)

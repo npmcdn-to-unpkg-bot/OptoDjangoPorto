@@ -32,6 +32,15 @@ urlpatterns = [
     url(r'^solutions/', include('apps.products.solutions.urls')),
     url(r'^panel_printers/', include('apps.products.thermal_printers.panel_printers.urls')),
     url(r'^mobile_printers/', include('apps.products.thermal_printers.mobile_printers.urls')),
+    url(r'^pos_printers/', include('apps.products.thermal_printers.pos_printers.urls')),
+    url(r'^mechanism/', include('apps.products.thermal_printers.mechanism.urls')),
+    url(r'^pcap/', include('apps.products.touch_panels.pcap.urls')),
+    url(r'^rtp/', include('apps.products.touch_panels.rtp.urls')),
+    url(r'^industrial_pcs/', include('apps.products.computers.industrial_pcs.urls')),
+    url(r'^monitors/', include('apps.products.computers.monitors.urls')),
+    url(r'^som/', include('apps.products.computers.som.urls')),
+    url(r'^laser_diodes/', include('apps.products.others.laser_diodes.urls')),
+    url(r'^pos_systems/', include('apps.products.others.pos_systems.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += [url(r'^uml/', include('django_spaghetti.urls'))]

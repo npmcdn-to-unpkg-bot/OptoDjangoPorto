@@ -1,6 +1,10 @@
 {% extends "templates/base.html" %}
 {% load staticfiles %}
 
+{% block topnav %}
+{% include 'templates/_topnav.html' with active_tab='about_us' %}
+{% endblock %}
+
 {% block title %}
     About us -
 {% endblock %}

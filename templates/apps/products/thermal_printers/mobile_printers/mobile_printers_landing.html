@@ -1,9 +1,16 @@
 {% extends "templates/base.html" %}
 {% load staticfiles %}
+
 {% block title %}
-Mobile Printers -{% endblock %}
+    Mobile Printers -
+{% endblock %}
+
 {% block extraHeader %}
   <!-- extra CSS -->
+{% endblock %}
+
+{% block topnav %}
+    {% include 'templates/_topnav.html' with active_tab='products' %}
 {% endblock %}
 
 {% block slideshow %}

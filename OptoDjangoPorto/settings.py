@@ -56,6 +56,15 @@ INSTALLED_APPS = [
     'apps.products.solutions',
     'apps.products.thermal_printers.panel_printers',
     'apps.products.thermal_printers.mobile_printers',
+    'apps.products.thermal_printers.pos_printers',
+    'apps.products.thermal_printers.mechanism',
+    'apps.products.computers.industrial_pcs',
+    'apps.products.computers.monitors',
+    'apps.products.computers.som',
+    'apps.products.others.laser_diodes',
+    'apps.products.others.pos_systems',
+    'apps.products.touch_panels.pcap',
+    'apps.products.touch_panels.rtp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -154,6 +163,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, '../static/media/partners_logo')
+MEDIA_URL = 'static/'
 
 SPAGHETTI_SAUCE = {
   'apps': ['auth', 'tft', ],

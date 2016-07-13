@@ -1,42 +1,61 @@
 {% load staticfiles %}
-    <div id="lcd" class="container mb-lg mt-lg">
+
+<section id="lcd" class="section section-no-background section-with-divider mt-none mb-none pt-none">
+    <div class="divider divider-style-3 divider-primary taller">
+        <i class="fa fa-chevron-down"></i>
+    </div>
+    <div class="container">
         <div class="row">
+            <h2 class="mt-lg text-center"><strong>LCD </strong>Segment</h2>
+            <hr>
             <div class="col-md-6">
-                <h2 class="mt-lg"><strong>LCD </strong>Segment</h2>
-                <p class="lead">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci.
+                <p class="lead text-justify">
+                    This is the place where LCD Segments informations are needed
+                    This is the place where LCD Segments informations are needed
+                    This is the place where LCD Segments informations are needed
+                    This is the place where LCD Segments informations are needed
                 </p>
-                <p class="mt-lg">
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent scelerisque volutpat turpis, eu hendrerit enim scel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent scelerisque volutpat turpis, eu hendrerit enim scel.
+                <p class="mt-lg text-justify">
+                    This text is supposed to be the second part of informations about LCD Segments
+                    This text is supposed to be the second part of informations about LCD Segments
+                    This text is supposed to be the second part of informations about LCD Segments
+                    This text is supposed to be the second part of informations about LCD Segments
+                    This text is supposed to be the second part of informations about LCD Segments
                 </p>
                 <a href="{% url 'tft:tft_list' %}" type="button" class="btn btn-primary btn-lg appear-animation bounceInRight appear-animation-visible">Read More</a>
             </div>
             <div class="col-md-6 mt-lg">
-                <img class="img-responsive appear-animation" src="{% static 'media/img/static_pages/landing_page/lcd_segment.png' %}" data-appear-animation="fadeInRight" alt="lcd segment">
+                <img class="img-responsive appear-animation" src="{% static 'media/img/static_pages/landing_page/lcd_segment.png' %}" data-appear-animation="fadeInRight" alt="lcd segment" style="max-height:250px">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-default section-no-background mt-none pt-none">
+    <div class="container">
+        <div class="row">
+            <h2 class="mt-lg text-center"><strong>LCD </strong>Graphic</h2>
+            <hr>
+            <div class="col-md-6 mt-lg">
+                <img class="img-responsive appear-animation" src="{% static 'media/img/static_pages/landing_page/tft-opto.png' %}" data-appear-animation="fadeInLeft" alt="lcd graphic">
+            </div>
+            <div class="col-md-6">
+                <p class="lead text-justify">
+                    This is the place where LCD Graphic informations are needed
+                    This is the place where LCD Graphic informations are needed
+                    This is the place where LCD Graphic informations are needed
+                </p>
+                <p class="mt-lg text-justify">
+                    This text is supposed to be the second part of informations about LCD Segments
+                    This text is supposed to be the second part of informations about LCD Segments
+                    This text is supposed to be the second part of informations about LCD Segments
+                    This text is supposed to be the second part of informations about LCD Segments
+                    This text is supposed to be the second part of informations about LCD Segments
+                    This text is supposed to be the second part of informations about LCD Segments
+                </p>
+                <a href="{% url 'lcd' %}" type="button" class="btn btn-primary btn-lg align-right appear-animation bounceInLeft appear-animation-visible">Read More</a>
             </div>
         </div>
     </div>
 
-    <section class="section section-default section-with-divider">
-        <div class="divider divider-solid divider-style-4 divider-primary">
-            <i class="fa fa-chevron-down"></i>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 mt-lg">
-                    <img class="img-responsive appear-animation" src="{% static 'media/img/static_pages/landing_page/tft-opto.png' %}" data-appear-animation="fadeInLeft" alt="lcd graphic">
-                </div>
-                <div class="col-md-6">
-                    <h2 class="mt-lg"><strong>LCD </strong>Graphic</h2>
-                    <p class="lead">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci.
-                    </p>
-                    <p class="mt-lg">
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent scelerisque volutpat turpis, eu hendrerit enim scel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent scelerisque volutpat turpis, eu hendrerit enim scel.
-                    </p>
-                    <a href="{% url 'tft:tft_list' %}" type="button" class="btn btn-primary btn-lg align-right appear-animation bounceInLeft appear-animation-visible">Read More</a>
-                </div>
-            </div>
-        </div>
-
-    </section>
+</section>

@@ -1,0 +1,21 @@
+{% extends "templates/base.html" %}
+{% load staticfiles %}
+
+{% block topnav %}
+{% include 'templates/_topnav.html' with active_tab='products' %}
+{% endblock %}
+
+{% block extraHeader %}
+  <!-- extra CSS -->
+{% endblock %}
+
+{% block slideshow %}
+{% endblock %}
+
+{% block content %}
+    {% include 'templates/apps/products/touch_panels/_pcap_details.html' %}
+{% endblock %}
+
+{% block ending_scripts %}
+<!-- custom scripts for THIS page -->
+{% endblock %}

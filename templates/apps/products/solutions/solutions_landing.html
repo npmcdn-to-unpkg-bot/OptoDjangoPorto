@@ -1,5 +1,14 @@
 {% extends "templates/base.html" %}
+
 {% load staticfiles %}
+
+{% block title %}
+    Solutions -
+{% endblock %}
+
+{% block topnav %}
+    {% include 'templates/_topnav.html' with active_tab='solutions' %}
+{% endblock %}
 
 {% block extraHeader %}
   <!-- extra CSS -->

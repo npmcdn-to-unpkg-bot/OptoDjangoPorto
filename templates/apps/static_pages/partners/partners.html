@@ -2,6 +2,10 @@
 
 {% load staticfiles %}
 
+{% block topnav %}
+{% include 'templates/_topnav.html' with active_tab='partners' %}
+{% endblock %}
+
 {% block title %}
     Partners -
 {% endblock %}

@@ -1,6 +1,9 @@
 {% extends "templates/base.html" %}
 {% load staticfiles %}
 
+{% block topnav %}
+{% include 'templates/_topnav.html' with active_tab='contact_us' %}
+{% endblock %}
 
 {% block title %}
     Contact Us -

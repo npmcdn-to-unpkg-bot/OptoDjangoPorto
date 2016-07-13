@@ -1,66 +1,76 @@
 {% load staticfiles %}
-<div class="container">
-<h1>Masonry - imagesLoaded callback, vanilla JS</h1>
 
-<div class="grid">
-  <div class="grid-sizer"></div>
-  <div class="grid-item">
-    <img alt="logo-data-image" class="img-responsive" src="{% static 'media/partners_logo/data_image_logo.gif' %}">
-  </div>
-  <div class="grid-item">
-    <img alt="logo-digitech" class="img-responsive" src="{% static 'media/partners_logo/digitech_logo.gif' %}">
-  </div>
-  <div class="grid-item">
-    <img alt="logo-digiwise" class="img-responsive" src="{% static 'media/partners_logo/digiwise_logo.gif' %}">
-  </div>
-  <div class="grid-item">
-    <img alt="logo-eink" class="img-responsive" src="{% static 'media/partners_logo/eink_logo.png' %}">
-  </div>
-  <div class="grid-item">
-    <img alt="logo-fenix" class="img-responsive" src="{% static 'media/partners_logo/fenix_logo.gif' %}">
-  </div>
-  <div class="grid-item">
-    <img alt="logo-fujitsu" class="img-responsive" src="{% static 'media/partners_logo/fujitsu_logo.gif' %}">
-  </div>
-  <div class="grid-item">
-    <img alt="logo-icop" class="img-responsive" src="{% static 'media/partners_logo/icop_logo.gif' %}">
-  </div>
-  <div class="grid-item">
-	<img alt="logo-lexsystem" class="img-responsive" src="{% static 'media/partners_logo/lexsystem_logo.gif' %}">
-  </div>
-  <div class="grid-item">
-    <img alt="logo-martel" class="img-responsive" src="{% static 'media/partners_logo/martel_logo.gif' %}">
-  </div>
-  <div class="grid-item">
-    <img alt="logo-nagasaki" class="img-responsive" src="{% static 'media/partners_logo/nagasaki_logo.gif' %}">
-  </div>
-  <div class="grid-item">
-    <img alt="logo-nexio" class="img-responsive" src="{% static 'media/partners_logo/nexio_logo.gif' %}">
-  </div>
-  <div class="grid-item">
-	<img alt="qsi-martel" class="img-responsive" src="{% static 'media/partners_logo/qsi_logo.gif' %}">
-  </div>
-  <div class="grid-item">
-    <img alt="logo-seiko" class="img-responsive" src="{% static 'media/partners_logo/seiko_logo.gif' %}">
-  </div>
-  <div class="grid-item">
-    <img alt="logo-star" class="img-responsive" src="{% static 'media/partners_logo/star_logo.gif' %}">
-  </div>
-  <div class="grid-item">
-    <img alt="logo-trentino" class="img-responsive" src="{% static 'media/partners_logo/trentino_logo.gif' %}">
-  </div>
-  <div class="grid-item">
-    <img alt="logo-zebra" class="img-responsive" src="{% static 'media/partners_logo/zebra_logo.gif' %}">
-  </div>
-</div>
+<section class="section section-no-background ml-auto mr-auto">
+  <div class="container">
+    <div class="mt-lg mb-lg heading heading-border heading-middle-border heading-middle-border-center">
+      <h1 class="mt-top"><strong class="text-tertiary">Partners</strong></h1>
+    </div>
 
-</div>
+    <div class="button-group partnersLogosFilter">
+      <button data-filter="*" class="button btn-primary current">show all</button>
+      {% for area in areas %}
+        <button data-filter=".{{ area }}" class="button btn-primary">{{ area }}</button>
+      {% endfor %}
+    </div>
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<hr class="tall">
-			<h4>Partners</h4>
-		</div>
-	</div>
-</div>
+    <div class="partnersLogos">
+      {% for partner in partners %}
+        <div class="{% for area in partner.get_area %}{{ area }} {% endfor %}">
+          <img  alt="logo-{{ partner.name }}" class="img-responsive" src="{{partner.logo.url}}">
+        </div>
+      {% endfor %}
+
+      <!--<div class="display tft lcd">
+        <img  alt="logo-apex" class="img-responsive" src="{% static 'media/partners_logo/apex_logo.gif' %}">
+      </div>
+      <div class="display tft lcd">
+        <img alt="logo-data-image" class="img-responsive" src="{% static 'media/partners_logo/data_image_logo.gif' %}">
+      </div>
+      <div class="display touch-panel rtp pcap">
+        <img alt="logo-digitech" class="img-responsive" src="{% static 'media/partners_logo/digitech_logo.gif' %}">
+      </div>
+      <div class="display epaper tft lcd oled">
+        <img alt="logo-eink" class="img-responsive" src="{% static 'media/partners_logo/eink_logo.png' %}">
+      </div>
+      <div class="thermal-printer kiosk-printer">
+        <img alt="logo-fenix" class="img-responsive" src="{% static 'media/partners_logo/fenix_logo.gif' %}">
+      </div>
+      <div class="touch-panel rtp">
+        <img alt="logo-fujitsu" class="img-responsive" src="{% static 'media/partners_logo/fujitsu_logo.gif' %}">
+      </div>
+      <div class="computer industrial-pc">
+        <img alt="logo-icop" class="img-responsive" src="{% static 'media/partners_logo/icop_logo.gif' %}">
+      </div>
+      <div class="computer industrial-pc">
+        <img alt="logo-lexsystem" class="img-responsive" src="{% static 'media/partners_logo/lexsystem_logo.gif' %}">
+      </div>
+      <div class="printer thermal-printer panel-printer mobile-printer mount-printer">
+        <img alt="logo-martel" class="img-responsive" src="{% static 'media/partners_logo/martel_logo.gif' %}">
+      </div>
+      <div class="computer industrial-pc monitor">
+        <img alt="logo-nagasaki" class="img-responsive" src="{% static 'media/partners_logo/nagasaki_logo.gif' %}">
+      </div>
+      <div class="display tft tft-monitor">
+        <img alt="logo-nexio" class="img-responsive" src="{% static 'media/partners_logo/nexio_logo.gif' %}">
+      </div>
+      <div class="laser-diodes">
+        <img alt="-logo-qsi" class="img-responsive" src="{% static 'media/partners_logo/qsi_logo.gif' %}">
+      </div>
+      <div class="thermal-printer printer-mechanism mobile-printer panel-printer mount-printer kiosk-printer">
+        <img alt="logo-seiko" class="img-responsive" src="{% static 'media/partners_logo/seiko_logo.gif' %}">
+      </div>
+      <div class="pos-printer matrix-printer thermal-printer kiosk-printer printer-mechanism">
+        <img alt="logo-star" class="img-responsive" src="{% static 'media/partners_logo/star_logo.gif' %}">
+      </div>
+      <div class="thermal-printer printer-controller">
+        <img alt="logo-trentino" class="img-responsive" src="{% static 'media/partners_logo/trentino_logo.gif' %}">
+      </div>
+      <div class="kiosk-printer thermal-printer">
+        <img alt="logo-zebra" class="img-responsive" src="{% static 'media/partners_logo/zebra_logo.gif' %}">
+      </div>
+      <div class="tft display">
+        <img alt="logo-digiwise" class="img-responsive" src="{% static 'media/partners_logo/digiwise-logo.png' %}">
+      </div>-->
+    </div>
+  </div>
+</section>
