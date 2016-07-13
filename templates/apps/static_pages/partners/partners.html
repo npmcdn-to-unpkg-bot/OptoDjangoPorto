@@ -1,0 +1,27 @@
+{% extends "templates/base.html" %}
+
+{% load staticfiles %}
+
+{% block topnav %}
+{% include 'templates/_topnav.html' with active_tab='partners' %}
+{% endblock %}
+
+{% block title %}
+    Partners -
+{% endblock %}
+
+{% block extraHeader %}
+  <!-- extra CSS -->
+{% endblock %}
+
+{% block slideshow %}
+{% endblock %}
+
+{% block content %}
+    {% include 'templates/apps/static_pages/partners/_partners_isotope.html' %}
+
+{% endblock %}
+
+{% block ending_scripts %}
+<!-- custom scripts for THIS page -->
+{% endblock %}

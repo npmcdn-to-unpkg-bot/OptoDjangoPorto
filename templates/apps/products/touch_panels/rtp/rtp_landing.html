@@ -1,0 +1,29 @@
+{% extends "templates/base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}
+    Resistive Touch Panel -
+{% endblock %}
+
+{% block topnav %}
+    {% include 'templates/_topnav.html' with active_tab='products' %}
+{% endblock %}
+
+
+{% block extraHeader %}
+  <!-- extra CSS -->
+{% endblock %}
+
+{% block slideshow %}
+    {% include 'templates/apps/products/touch_panels/rtp/_slideshow_rtp.html' %}
+{% endblock %}
+
+{% block content %}
+    {% include 'templates/apps/products/touch_panels/rtp/_rtp_intro.html' %}
+    {% include 'templates/apps/products/touch_panels/rtp/_rtp_list.html' %}
+{% endblock %}
+
+{% block ending_scripts %}
+<!-- custom scripts for THIS page -->
+{% endblock %}

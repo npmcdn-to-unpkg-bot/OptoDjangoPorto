@@ -1,0 +1,29 @@
+{% extends "templates/base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}
+    Solutions -
+{% endblock %}
+
+{% block topnav %}
+    {% include 'templates/_topnav.html' with active_tab='solutions' %}
+{% endblock %}
+
+{% block extraHeader %}
+  <!-- extra CSS -->
+{% endblock %}
+
+{% block slideshow %}
+    {% include 'templates/apps/products/solutions/_solutions_slideshow.html' %}
+{% endblock %}
+
+{% block content %}
+    {% include 'templates/apps/products/solutions/_solutions_intro.html' %}
+    {% include 'templates/apps/products/solutions/_solutions_list.html' %}
+{% endblock %}
+
+{% block ending_scripts %}
+<!-- custom scripts for THIS page -->
+<!-- <script type="text/javascript" src="{% static 'js/scriptIndex.js' %}"></script> -->
+{% endblock %}

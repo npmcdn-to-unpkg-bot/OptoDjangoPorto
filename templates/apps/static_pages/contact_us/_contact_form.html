@@ -67,14 +67,17 @@
             </form>
             {% else %}
                 <!-- TODO review bloc message thank you (more fun) -->
-                <div><h4 class="heading-primary mt-lg">Thank you <strong>{{ firstname }}</strong>.</h4></div>
+                <div><h4 class="heading-primary mt-lg">Your message has been sent successfully, thank you <strong>{{ firstname }}</strong>.</h4></div>
+                <span class="img-thumbnail">
+                    <img class="img-responsive" src="{% static 'media/img/contact_us/thank-you.jpg' %}" alt="greetings image">
+                </span>
             {% endif %}
         </div>
         <div class="col-md-6">
 
             <h4 class="heading-primary mt-lg">Get in <strong>Touch</strong></h4>
             <!-- TODO review this text -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>We are here to answer any questions you may have about. </p>
 
             <hr>
 

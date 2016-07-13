@@ -1,8 +1,12 @@
 {% extends "templates/base.html" %}
 {% load staticfiles %}
 
+{% block topnav %}
+{% include 'templates/_topnav.html' with active_tab='about_us' %}
+{% endblock %}
+
 {% block title %}
-    About us
+    About us -
 {% endblock %}
 
 {% block extraHeader %}
@@ -22,11 +26,12 @@
 
 
 {% endblock %}
+
+{% block ending_scripts %}
+<!-- custom scripts for THIS page -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnF6Kt_hRql9eZZ96grbJ6J663J-33lhU&callback=initMap" async defer></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobubble/src/infobubble.js"></script>
-{% block ending_scripts %}
 
-<!-- custom scripts for THIS page -->
 <!-- <script type="text/javascript" src="{% static 'js/scriptIndex.js' %}"></script> -->
 {% endblock %}

@@ -1,5 +1,14 @@
 {% extends "templates/base.html" %}
+
 {% load staticfiles %}
+
+{% block title %}
+    OLED -
+{% endblock %}
+
+{% block topnav %}
+    {% include 'templates/_topnav.html' with active_tab='products' %}
+{% endblock %}
 
 {% block extraHeader %}
   <!-- extra CSS -->

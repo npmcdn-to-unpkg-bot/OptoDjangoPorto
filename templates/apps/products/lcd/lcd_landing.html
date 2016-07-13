@@ -1,5 +1,15 @@
 {% extends "templates/base.html" %}
+
 {% load staticfiles %}
+
+{% block title %}
+    LCD -
+{% endblock %}
+
+{% block topnav %}
+    {% include 'templates/_topnav.html' with active_tab='products' %}
+{% endblock %}
+
 
 {% block extraHeader %}
   <!-- extra CSS -->

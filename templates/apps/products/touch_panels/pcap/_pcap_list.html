@@ -1,0 +1,70 @@
+{% load staticfiles %}
+
+{% block extraHeader %}
+
+{% endblock %}
+
+<hr>
+<div class="container">
+
+    <h2><strong>PCAP</strong> List</h2>
+    {% if tft_list_all %}
+    <table id="tft_list" class="display table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead class="text-center">
+            <tr >
+                <th>Panel Model</th>
+                <th>Size</th>
+                <th>Resolution</th>
+                <th>Resolution</th>
+                <th>Brightness</th>
+                <th>Interfaces</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tft in tft_list_all %}
+            <tr>
+                <td><a href="{% url 'tft:tft_detail' tft.id %}">{{ tft.panel_model }}</a></td>
+                <td>{{ tft.size }}</td>
+                <td>{{ tft.resolution.resolution_numeric }}</td>
+                <td>{{ tft.resolution.resolution }}</td>
+                <td>{{ tft.brightness }}</td>
+                <td>{{ tft.display_interfaces }}</td>
+                <td>{% if tft.production %}
+                    In production
+                    {% else %}
+                    Discontinued
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="paging"></div>
+    {% else %}
+    <p>No tfts are available.</p>
+    {% endif %}
+
+</div>
+
+<script type="text/javascript" src="{% static 'js/datatable/datatable.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datatable/datatable.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datatable/datatable.jquery.min.js' %}"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+<script>
+
+var datatable = new DataTable(document.getElementById('tft_list'), {
+    pageSize: 10,
+    filters: ['select', 'select', 'select', select, select, true, 'select'],
+    sort: '*',
+    filterEmptySelect: 'All'
+});
+
+datatable.loadPage(3);
+var data = datatable.all();
+datatable.deleteAll(function (e) {
+    return e.title.trim().length > 0;
+});
+
+</script>

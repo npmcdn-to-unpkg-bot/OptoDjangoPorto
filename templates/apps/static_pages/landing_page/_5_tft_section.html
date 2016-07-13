@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<section id="tft" class="section section-no-background">
+    <div class="container mb-lg">
+        <div class="row">
+            <h2 class="mt-lg text-center"><strong>TFT </strong>Displays</h2>
+            <hr class="short mb-lg">
+            <div class="col-md-6">
+                <p class="lead text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci.
+                </p>
+                <p class="mt-lg text-justify">
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent scelerisque volutpat turpis, eu hendrerit enim scel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent scelerisque volutpat turpis, eu hendrerit enim scel.
+                </p>
+                <a href="{% url 'tft:tft_list' %}" type="button" class="btn btn-primary btn-lg">Read More</a>
+            </div>
+            <div class="col-md-6 ">
+                <img class="img-responsive appear-animation" src="{% static 'media/img/static_pages/landing_page/tft-opto.png' %}" data-appear-animation="fadeInRight" alt="">
+            </div>
+        </div>
+    </div>
+</section>

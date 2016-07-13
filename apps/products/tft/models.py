@@ -10,7 +10,7 @@ class SizeTft(models.Model):
         return u"{} \"".format(self.size_inch)
 
     def _get_size_mm(self):
-        "Returns the size in mm."
+        # "Returns the size in mm."
         size = round(self.size_inch * 25.4, 2)
         return float(size)
 

@@ -1,4 +1,5 @@
 {% load staticfiles %}
+<!-- TODO Setup the activation of topnav li -->
 <header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": true}'>
 	<div class="header-body">
 		<div class="header-container container">
@@ -6,7 +7,7 @@
 				<div class="header-column">
 					<div class="header-logo">
 						<a href="{% url 'landing-page' %}">
-							<img alt="OPTO Logic TECHNOLOGY" width="265" height="54" data-sticky-width="197" data-sticky-height="40" data-sticky-top="33" src="{% static 'media/img/logo_opto.png' %}">
+							<img alt="LOGO OPTO Logic TECHNOLOGY" width="265" height="54" data-sticky-width="197" data-sticky-height="40" data-sticky-top="33" src="{% static 'media/img/logo_opto.png' %}">
 						</a>
 					</div>
 				</div>
@@ -32,13 +33,13 @@
 								</li>
 								<li>
 									<a href="#" class="dropdown-menu-toggle" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-										<img src="{% static 'media/img/blank.gif' %}" class="flag flag-gb" alt="English" /> English
+										<img src="{% static 'media/img/blank.gif' %}" class="flag flag-ch" alt="English" /> English
 										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownLanguage">
 										<li><a href="#"><img src="{% static 'media/img/blank.gif' %}" class="flag flag-ch" alt="English" /> English</a></li>
-										<li><a href="#"><img src="{% static 'media/img/blank.gif' %}" class="flag flag-ch" alt="Français" /> Français</a></li>
 										<li><a href="#"><img src="{% static 'media/img/blank.gif' %}" class="flag flag-ch" alt="Deutch" /> Deutch</a></li>
+										<li><a href="#"><img src="{% static 'media/img/blank.gif' %}" class="flag flag-ch" alt="Français" /> Française</a></li>
 									</ul>
 								</li>
 								<li class="hidden-xs">
@@ -58,161 +59,89 @@
 							<div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
 								<nav>
 									<ul class="nav nav-pills" id="mainNav">
-										<li class="dropdown active">
-											<a class="dropdown-toggle" href="#">
-												Product
+										<li class="{% if active_tab == 'landing-page' %} active{% endif %}">
+											<a  href="{% url 'landing-page' %}">
+												Home
+											</a>
+										</li>
+										<li class="dropdown{% if active_tab == 'products'%} active
+										{% elif active_tab == 'tft' %} active
+										{% elif active_tab == 'lcd' %} active
+										{% elif active_tab == 'oled' %} active
+										{% elif active_tab == 'epaper' %} active
+										{% elif active_tab == 'panel_printers' %} active
+										{% elif active_tab == 'mobile_printers' %} active
+										{% elif active_tab == 'pos_printers' %} active
+										{% endif %}">
+											<a class="dropdown-toggle">
+												Products
 											</a>
 											<ul class="dropdown-menu">
 												<li class="dropdown-submenu">
-													<a href="#">Displays</a>
+													<a>Displays</a>
 													<ul class="dropdown-menu">
 														<li><a href="{% url 'tft:tft_list' %}">TFT</a></li>
-														<li class="dropdown-submenu">
-															<a href="{% url 'lcd' %}">LCD</a>
-															<ul class="dropdown-menu">
-																<li><a href="#">LCD Module</a></li>
-																<li><a href="#">LCD Segment</a></li>
-															</ul>
-														</li>
+														<li><a href="{% url 'lcd' %}">LCD</a></li>
 														<li><a href="{% url 'oled' %}">OLED</a></li>
 														<li><a href="{% url 'epaper' %}">ePAPER</a></li>
 														<li><a href="{% url 'custom' %}">Custom solution</a></li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
-													<a href="#">Thermal Printers</a>
+													<a >Thermal Printers</a>
 													<ul class="dropdown-menu">
 														<li><a href="{% url 'panel_printers' %}">Panel Printer</a></li>
 														<li><a href="{% url 'mobile_printers' %}">Mobile Printer</a></li>
-														<li><a href="#">POS Printer</a></li>
-														<li><a href="#">Mechanism</a></li>
+														<li><a href="{% url 'pos_printers' %}">POS Printer</a></li>
+														<li><a href="{% url 'mechanism' %}">Mechanism</a></li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
-													<a href="#">Touch Panels</a>
+													<a >Touch Panels</a>
 													<ul class="dropdown-menu">
-														<li><a href="#">PCAP</a></li>
-														<li><a href="#">RTP</a></li>
+														<li><a href="{% url 'pcap' %}">PCAP</a></li>
+														<li><a href="{% url 'rtp' %}">RTP</a></li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
-													<a href="#">Touch Panels</a>
+													<a >Computers</a>
 													<ul class="dropdown-menu">
-														<li><a href="#">PCAP</a></li>
-														<li><a href="#">RTP</a></li>
+														<li><a href="{% url 'industrial_pcs' %}">Industrial PC's</a></li>
+														<li><a href="{% url 'monitors' %}">Monitors</a></li>
+														<li><a href="{% url 'som' %}">SOM</a></li>
 													</ul>
 												</li>
 												<li class="dropdown-submenu">
-													<a href="#">Computers</a>
+													<a>Others</a>
 													<ul class="dropdown-menu">
-														<li><a href="#">Industrial PC's</a></li>
-														<li><a href="#">Monitors</a></li>
-														<li><a href="#">SOM</a></li>
-													</ul>
-												</li>
-												<li class="dropdown-submenu">
-													<a href="#">Others</a>
-													<ul class="dropdown-menu">
-														<li><a href="#">Laser Diodes</a></li>
-														<li><a href="#">Pos Systems</a></li>
+														<li><a href="{% url 'laser_diodes' %}">Laser Diodes</a></li>
+														<li><a href="{% url 'pos_systems' %}">Pos Systems</a></li>
 													</ul>
 												</li>
 											</ul>
 										</li>
-										<li class="dropdown ">
-											<a class="dropdown-toggle" href="#">
+										<li class="{% if active_tab == 'solutions' %} active{% endif %}">
+											<a  href="{% url 'solutions' %}">
 												Solutions
 											</a>
-											<ul class="dropdown-menu">
-												<li class="dropdown-submenu">
-													<a href="#">Custom</a>
-													<ul class="dropdown-menu">
-														<li><a href="#">We</a></li>
-														<li><a href="#">Develop</a></li>
-														<li><a href="#">Projects</a></li>
-														<li><a href="#">Together</a></li>
-													</ul>
-												</li>
-											</ul>
+
 										</li>
 										</li>
-										<li class="dropdown">
-											<a class="dropdown-toggle" href="#">
+										<li class="{% if active_tab == 'partners' %} active{% endif %}">
+											<a href="{% url 'partners' %}">
 												PARTNERS
 											</a>
-											<ul class="dropdown-menu">
-												<li class="dropdown-submenu">
-													<a href="#">Single Project</a>
-													<ul class="dropdown-menu">
-														<li><a href="portfolio-single-small-slider.html">Small Slider</a></li>
-													</ul>
-												</li>
-												<li class="dropdown-submenu">
-													<a href="#">Sub Menu</a>
-													<ul class="dropdown-menu">
-														<li><a href="portfolio-grid-1-column.html">1 Column</a></li>
-														<li><a href="portfolio-grid-2-columns.html">2 Columns</a></li>
-														<li><a href="portfolio-grid-3-columns.html">3 Columns</a></li>
-														<li><a href="portfolio-grid-4-columns.html">4 Columns</a></li>
-														<li><a href="portfolio-grid-5-columns.html">5 Columns</a></li>
-														<li><a href="portfolio-grid-6-columns.html">6 Columns</a></li>
-														<li><a href="portfolio-grid-no-margins.html">No Margins</a></li>
-														<li><a href="portfolio-grid-full-width.html">Full Width</a></li>
-														<li><a href="portfolio-grid-full-width-no-margins.html">Full Width No Margins</a></li>
-														<li><a href="portfolio-grid-1-column-title-and-description.html">Title and Description</a></li>
-													</ul>
-												</li>
-												<li class="dropdown-submenu">
-													<a href="#">Masonry Layouts</a>
-													<ul class="dropdown-menu">
-														<li><a href="portfolio-masonry-2-columns.html">2 Columns</a></li>
-														<li><a href="portfolio-masonry-3-columns.html">3 Columns</a></li>
-														<li><a href="portfolio-masonry-4-columns.html">4 Columns</a></li>
-														<li><a href="portfolio-masonry-5-columns.html">5 Columns</a></li>
-														<li><a href="portfolio-masonry-6-columns.html">6 Columns</a></li>
-														<li><a href="portfolio-masonry-no-margins.html">No Margins</a></li>
-														<li><a href="portfolio-masonry-full-width.html">Full Width</a></li>
-													</ul>
-												</li>
-												<li class="dropdown-submenu">
-													<a href="#">Sidebar Layouts</a>
-													<ul class="dropdown-menu">
-														<li><a href="portfolio-sidebar-left.html">Left Sidebar</a></li>
-														<li><a href="portfolio-sidebar-right.html">Right Sidebar</a></li>
-														<li><a href="portfolio-sidebar-left-and-right.html">Left and Right Sidebars</a></li>
-														<li><a href="portfolio-sidebar-sticky.html">Sticky Sidebar</a></li>
-													</ul>
-												</li>
-												<li class="dropdown-submenu">
-													<a href="#">Ajax</a>
-													<ul class="dropdown-menu">
-														<li><a href="portfolio-ajax-page.html">Ajax on Page</a></li>
-														<li><a href="portfolio-ajax-modal.html">Ajax on Modal</a></li>
-													</ul>
-												</li>
-												<li class="dropdown-submenu">
-													<a href="#">Extra</a>
-													<ul class="dropdown-menu">
-														<li><a href="portfolio-extra-timeline.html">Timeline</a></li>
-														<li><a href="portfolio-extra-lightbox.html">Lightbox</a></li>
-														<li><a href="portfolio-extra-load-more.html">Load More</a></li>
-														<li><a href="portfolio-extra-lazy-load.html">Lazy Load</a></li>
-														<li><a href="portfolio-extra-pagination.html">Pagination</a></li>
-														<li><a href="portfolio-extra-combination-filters.html">Combination Filters</a></li>
-													</ul>
-												</li>
-											</ul>
 										</li>
-										<li class="dropdown">
+										<li class="{% if active_tab == 'about_us' %} active{% endif %} dropdown">
 											<a class="dropdown-toggle" href="{% url 'about_us' %}">About Us</a>
 											<ul class="dropdown-menu">
-												<li><a href="portfolio-extra-timeline.html">Our Services</a></li>
-												<li><a href="portfolio-extra-timeline.html">Quality</a></li>
-												<li><a href="portfolio-extra-timeline.html">Jobs</a></li>
+												<li><a href="{% url 'about_us' %}">Our Services</a></li>
+												<li><a href="{% url 'about_us' %}">Quality</a></li>
+												<li><a href="{% url 'about_us' %}">Jobs</a></li>
 											</ul>
 										</li>
-										<li class="dropdown">
-											<a class="" href="{% url 'contact_us' %}">
+										<li class="{% if active_tab == 'contact_us' %} active{% endif %}">
+											<a href="{% url 'contact_us' %}">
 												Contact Us
 											</a>
 										</li>

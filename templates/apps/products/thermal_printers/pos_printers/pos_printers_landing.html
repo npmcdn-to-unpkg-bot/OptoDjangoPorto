@@ -1,0 +1,29 @@
+{% extends "templates/base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}
+    POS Printers -
+{% endblock %}
+
+{% block topnav %}
+{% include 'templates/_topnav.html' with active_tab='products' %}
+{% endblock %}
+
+{% block extraHeader %}
+  <!-- extra CSS -->
+{% endblock %}
+
+{% block slideshow %}
+    {% include 'templates/apps/products/thermal_printers/pos_printers/_pos_printers_slideshow.html' %}
+{% endblock %}
+
+{% block content %}
+    {% include 'templates/apps/products/thermal_printers/pos_printers/_pos_printers_intro.html' %}
+    {% include 'templates/apps/products/thermal_printers/pos_printers/_pos_printers_table.html' %}
+{% endblock %}
+
+{% block ending_scripts %}
+<!-- custom scripts for THIS page -->
+<!-- <script type="text/javascript" src="{% static 'js/scriptIndex.js' %}"></script> -->
+{% endblock %}

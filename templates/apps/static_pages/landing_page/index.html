@@ -2,7 +2,11 @@
 {% load staticfiles %}
 
 {% block title %}
-    Welcome
+    Welcome -
+{% endblock %}
+
+{% block topnav %}
+{% include 'templates/_topnav.html' with active_tab='landing-page' %}
 {% endblock %}
 
 {% block extraHeader %}
@@ -19,11 +23,13 @@
 
 {% block content %}
     {% include 'templates/apps/static_pages/landing_page/_3_whoweare.html' %}
+    {% include 'templates/apps/static_pages/landing_page/_#_counter_section.html' %}
     {% include 'templates/apps/static_pages/landing_page/_4_services.html' %}
-    {% include 'templates/apps/static_pages/landing_page/_5_section.html' %}
-    {% include 'templates/apps/static_pages/landing_page/_6_section.html' %}
-    {% include 'templates/apps/static_pages/landing_page/_7_section.html' %}
-    {% include 'templates/apps/static_pages/landing_page/_kiosk_printer_seiko_edito.html' %}
+    {% include 'templates/apps/static_pages/landing_page/_7_project_section.html' %}
+    {% include 'templates/apps/static_pages/landing_page/_5_tft_section.html' %}
+    {% include 'templates/apps/static_pages/landing_page/_8_kiosk_printer_seiko_edito.html' %}
+    {% include 'templates/apps/static_pages/landing_page/_#_lcd_section.html' %}
+    {% include 'templates/apps/static_pages/landing_page/_#_som_section.html' %}
 {% endblock %}
 
 {% block ending_scripts %}
