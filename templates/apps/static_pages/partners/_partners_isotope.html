@@ -12,7 +12,7 @@
           <button data-filter=".{{ area }}" class="button btn-primary">{{ area }}</button>
         {% endfor %}
       </div>
-      <div class="partnersLogos">
+      <div class="partnersLogos center-block" style="max-width:80%;">
         {% for partner in partners %}
           <div class="grid {% for area in partner.get_area %}{{ area }} {% endfor %}">
             <img  alt="logo-{{ partner.name }}" class="img-responsive" src="{{ partner.logo.url }}" style="height:98px;">

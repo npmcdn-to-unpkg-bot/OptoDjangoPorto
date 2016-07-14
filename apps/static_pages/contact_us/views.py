@@ -19,9 +19,9 @@ def index(request):
             contact_email = form.cleaned_data['email']
             contact_subject = form.cleaned_data['subject']
             contact_message = form.cleaned_data['message']
-            contact_message = "Essai message contact\n\nFirst name: " + contact_fname
-            contact_message += "\nLast name: " + contact_lname
-            contact_message += "\nMessage :\n" + contact_message
+            #contact_message += "\nContact: \nFirst name: " + contact_fname
+            #contact_message += "\nLast name:\n " + contact_lname
+            #contact_message += "\nMessage :\n" + contact_message
 
             # email to customer
             plaintext = get_template('templates/apps/static_pages/contact_us/email.txt')

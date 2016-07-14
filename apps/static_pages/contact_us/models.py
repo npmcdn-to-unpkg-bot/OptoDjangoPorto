@@ -4,11 +4,13 @@ from django.core.exceptions import ValidationError
 
 regex = r"([a-zA-Z])"
 
+
 def validate_even(value):
     if not re.search(regex, value):
         value = str(value)
-        output =  '%s is not a valid entry' %(str(value))
+        output = '%s is not a valid entry' % (str(value))
         raise ValidationError(output)
+
 
 # Create your models here.
 class Contact(models.Model):
