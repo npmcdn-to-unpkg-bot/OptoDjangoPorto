@@ -65,8 +65,8 @@ INSTALLED_APPS = [
     'apps.products.others.pos_systems',
     'apps.products.touch_panels.pcap',
     'apps.products.touch_panels.rtp',
+    'apps.newsletter',
     'django.contrib.admin',
-    'django.contrib.sites',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -75,12 +75,6 @@ INSTALLED_APPS = [
     'django_extensions',
     'debug_toolbar',
     'django_spaghetti',
-    'newsletter',
-    'sorl.thumbnail',
-    # text editor
-    'imperavi',
-
-
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -159,7 +153,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
@@ -172,7 +165,7 @@ STATICFILES_DIRS = [
     # '/var/www/static/',
 ]
 
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, '../static/media/')
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, '../static/media/partners_logo')
 MEDIA_URL = '/static/media/partners_logo/'
 
 SPAGHETTI_SAUCE = {
