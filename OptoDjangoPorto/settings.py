@@ -66,6 +66,7 @@ INSTALLED_APPS = [
     'apps.products.touch_panels.pcap',
     'apps.products.touch_panels.rtp',
     'django.contrib.admin',
+    'django.contrib.sites',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -74,6 +75,12 @@ INSTALLED_APPS = [
     'django_extensions',
     'debug_toolbar',
     'django_spaghetti',
+    'newsletter',
+    'sorl.thumbnail',
+    # text editor
+    'imperavi',
+
+
 ]
 
 MIDDLEWARE_CLASSES = [
