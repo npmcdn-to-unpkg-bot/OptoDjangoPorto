@@ -11,13 +11,16 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+FIXTURE_DIRS = (
+    os.path.join(PROJECT_ROOT, 'fixtures'),
+)
 print(BASE_DIR)
 print(PROJECT_ROOT)
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
@@ -43,6 +46,7 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # Application definition
 
 INSTALLED_APPS = [
+    'apps.newsletter',
     'apps.static_pages.partners',
     'apps.static_pages.landing_page',
     'apps.static_pages.about_us',
@@ -65,7 +69,6 @@ INSTALLED_APPS = [
     'apps.products.others.pos_systems',
     'apps.products.touch_panels.pcap',
     'apps.products.touch_panels.rtp',
-    'apps.newsletter',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -78,14 +81,16 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE_CLASSES = [
-    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+
 ]
 
 ROOT_URLCONF = 'OptoDjangoPorto.urls'
@@ -101,6 +106,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # added for translations not sure witch is true right now
+                'django.template.context_processors.i18n',
+                "django.core.context_processors.i18n",
+                "django.template.context_processors.static",
             ],
             'debug': DEBUG,
         },
@@ -109,10 +118,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'OptoDjangoPorto.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -120,10 +127,8 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -139,11 +144,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
+# https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-django/l-internationalisation-1
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-GB'
+
+LANGUAGES = (
+    ('fr', _('French')),
+    ('en', _('English')),
+    ('de', _('German')),
+)
 
 TIME_ZONE = 'UTC'
 
@@ -164,13 +175,16 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     # '/var/www/static/',
 ]
+LOCALE_PATH = (
+    os.path.join(BASE_DIR, '/locale'),
 
+)
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, '../static/media/partners_logo')
 MEDIA_URL = '/static/media/partners_logo/'
 
 SPAGHETTI_SAUCE = {
-  'apps': ['auth', 'tft', ],
-  'show_fields': False,
+    'apps': ['auth', 'tft', ],
+    'show_fields': False,
 }
 
 EMAIL_OPTOLOGIC_SENDER = 'optodummy@gmail.com'

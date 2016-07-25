@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
+from django.utils.translation import get_language
 
 from .models import Tft, SizeTft
 # Create your views here.
@@ -7,6 +8,7 @@ from .models import Tft, SizeTft
 def IndexView(request):
         tft_list_all = Tft.objects.order_by('size')
         tft_size = SizeTft.objects.order_by('size_inch')
+        print(get_language())
 
 
         template_name = 'templates/apps/products/tft/tft_landing.html'

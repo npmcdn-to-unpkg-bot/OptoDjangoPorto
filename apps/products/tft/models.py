@@ -1,6 +1,4 @@
 from django.db import models
-import time
-from django.core.urlresolvers import reverse
 
 
 # Create your models here..
@@ -17,14 +15,12 @@ class SizeTft(models.Model):
 
     size_mm = property(_get_size_mm)
 
-
-
     class Meta:
         ordering = ('size_inch',)
 
 
 class BrandTft(models.Model):
-    brand = models.CharField(max_length=75)
+    brand = models.OneToOneField('partners.partner')
 
     def __str__(self):
         return u"{}".format(self.brand)

@@ -1,19 +1,20 @@
 {% load staticfiles %}
+{% load i18n %}
 
-    <div id="oled" class="container mb-lg mt-lg">
-        <div class="row">
-            <div class="col-md-6">
-                <h2 class="mt-lg"><strong>OLED </strong>Displays</h2>
-                <p class="lead">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci.
-                </p>
-                <p class="mt-lg">
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent scelerisque volutpat turpis, eu hendrerit enim scel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent scelerisque volutpat turpis, eu hendrerit enim scel.
-                </p>
-                <a href="{% url 'tft:tft_list' %}" type="button" class="btn btn-primary btn-lg">Read More</a>
-            </div>
-            <div class="col-md-6 mt-lg">
-                <img class="img-responsive appear-animation" src="{% static 'media/img/static_pages/landing_page/tft-opto.png' %}" data-appear-animation="fadeInRight" alt="">
-            </div>
+<div id="oled" class="container mb-lg mt-lg">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="mt-lg"><strong>OLED </strong>Displays</h2>
+            <p class="lead">
+                {% trans "This is where OLED are made with meat flavor and candy juice" %}
+            </p>
+            <p class="mt-lg">
+                {% trans "This is where OLED are made with meat flavor and candy juice" %}
+            </p>
+            <a href="{% url 'tft:tft_list' %}" type="button" class="btn btn-primary btn-lg">{% trans "Read More" %}</a>
+        </div>
+        <div class="col-md-6 mt-lg">
+            <img class="img-responsive appear-animation" src="{% static 'media/img/static_pages/landing_page/tft-opto.png' %}" data-appear-animation="fadeInRight" alt="">
         </div>
     </div>
+</div>

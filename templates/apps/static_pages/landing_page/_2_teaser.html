@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load i18n %}
 
 <div class="home-intro" id="home-intro">
     <div class="container">
@@ -6,14 +7,14 @@
         <div class="row">
             <div class="col-md-8">
                 <p>
-                    The fastest way to develop your custom project <em>OPTO Logic Technology</em>
-                    <span class="text-center">Please contact us, to study your needs.</span>
+                    {% trans "The fastest way to develop your custom project" %} <em>OPTO Logic Technology</em>
+                    <span class="text-center">{% trans "Please contact us, to study your needs." %}</span>
                 </p>
             </div>
             <div class="col-md-4">
                 <div class="get-started">
-                    <a href="{% url 'contact_us' %}" class="btn btn-lg btn-primary">Contact us Now!</a>
-                    <div class="learn-more">or <a href="{% url 'solutions' %}">Learn more.</a></div>
+                    <a href="{% url 'contact_us' %}" class="btn btn-lg btn-primary">{% trans "Contact us Now!" %}</a>
+                    <div class="learn-more">or <a href="{% url 'solutions' %}">{% trans "Learn more." %}</a></div>
                 </div>
             </div>
         </div>

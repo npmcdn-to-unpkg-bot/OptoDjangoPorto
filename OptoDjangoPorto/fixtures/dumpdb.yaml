@@ -1,0 +1,582 @@
+
+- model: partners.businessarea
+  pk: 1
+  fields: {area: TFT, weight: 101}
+- model: partners.businessarea
+  pk: 2
+  fields: {area: LCD, weight: 100}
+- model: partners.businessarea
+  pk: 3
+  fields: {area: LASER-DIODE, weight: 70}
+- model: partners.businessarea
+  pk: 4
+  fields: {area: OLED, weight: 97}
+- model: partners.businessarea
+  pk: 5
+  fields: {area: EPAPER, weight: 96}
+- model: partners.businessarea
+  pk: 6
+  fields: {area: INDUSTRIAL-PC, weight: 85}
+- model: partners.businessarea
+  pk: 7
+  fields: {area: SOM, weight: 50}
+- model: partners.businessarea
+  pk: 8
+  fields: {area: THERMAL-PRINTER, weight: 91}
+- model: partners.businessarea
+  pk: 9
+  fields: {area: TOUCH-PANEL, weight: 94}
+- model: partners.partner
+  pk: 1
+  fields:
+    name: Data Image Corp.
+    logo: ./data_image_logo.gif
+    area: [1, 2]
+- model: partners.partner
+  pk: 2
+  fields:
+    name: Apex Science & Engineering Corp.
+    logo: ./apex_logo.gif
+    area: [1, 2]
+- model: partners.partner
+  pk: 3
+  fields:
+    name: Data International.
+    logo: ./data_international-logo.gif
+    area: [2]
+- model: partners.partner
+  pk: 4
+  fields:
+    name: DigiWise.
+    logo: ./digiwise-logo.png
+    area: [2]
+- model: partners.partner
+  pk: 5
+  fields:
+    name: Eink.
+    logo: ./eink_logo.png
+    area: [4, 5]
+- model: partners.partner
+  pk: 6
+  fields:
+    name: Fenix imvico, S.A.
+    logo: ./fenix_logo.gif
+    area: [8]
+- model: partners.partner
+  pk: 7
+  fields:
+    name: Icop Intelligent control on processor.
+    logo: ./icop_logo.gif
+    area: [6]
+- model: partners.partner
+  pk: 8
+  fields:
+    name: Lex System.
+    logo: ./lexsystem_logo.gif
+    area: [6]
+- model: partners.partner
+  pk: 9
+  fields:
+    name: Martel Instruments.
+    logo: ./martel_logo.gif
+    area: [8]
+- model: partners.partner
+  pk: 10
+  fields:
+    name: Nagasaki Industrial PC Leader.
+    logo: ./nagasaki_logo.gif
+    area: [6]
+- model: partners.partner
+  pk: 11
+  fields:
+    name: Nexio.
+    logo: ./nexio_logo.gif
+    area: [1]
+- model: partners.partner
+  pk: 12
+  fields:
+    name: QSI Quantum Semiconductor International.
+    logo: ./QSI_LOGO.png
+    area: [3]
+- model: partners.partner
+  pk: 13
+  fields:
+    name: Raystar.
+    logo: ./raystar_logo.png
+    area: [1, 2, 4]
+- model: partners.partner
+  pk: 14
+  fields:
+    name: Seiko.
+    logo: ./seiko_logo.gif
+    area: [8]
+- model: partners.partner
+  pk: 15
+  fields:
+    name: Shoei co. ltd.
+    logo: ./shoei.png
+    area: [9]
+- model: partners.partner
+  pk: 16
+  fields:
+    name: Star Mocronics.
+    logo: ./star_micronics_logo.jpg
+    area: [8]
+- model: partners.partner
+  pk: 17
+  fields:
+    name: Tentino Systems.
+    logo: ./trentino_logo.gif
+    area: [6]
+- model: tft.sizetft
+  pk: 1
+  fields: {size_inch: 10.4}
+- model: tft.brandtft
+  pk: 1
+  fields: {brand: 1}
+- model: tft.resolutiontft
+  pk: 1
+  fields: {resolution: VGA, resolution_x: 800, resolution_y: 600, primary_colors: RGB,
+    ratio: '4:3'}
+- model: tft.interfacetft
+  pk: 1
+  fields: {interface: LVDS}
+- model: tft.interfacetft
+  pk: 2
+  fields: {interface: TTL}
+- model: tft.tft
+  pk: 1
+  fields:
+    opto_part_number: 00.00.00000
+    panel_model: FG0507DWSVXEQEDEX12
+    brightness: 3000
+    contrast: '800:1'
+    colors: 16.1M
+    backlight: WLED
+    viewing_angle_upper: 89
+    viewing_angle_down: 89
+    viewing_angle_left: 89
+    viewing_angle_right: 89
+    outline_x: 5.0
+    outline_y: 5.0
+    outline_z: 5.0
+    active_area_x: 5.0
+    active_area_y: 10.0
+    temperature_operating_min: -30.0
+    temperature_operating_max: 90.0
+    temperature_storage_min: -30.0
+    temperature_storage_max: 50.0
+    production: true
+    touch_panel: true
+    description: This TFT will amaze you!
+    size: 1
+    brand: 1
+    resolution: 1
+    interfaces: [1, 2]
+- model: contenttypes.contenttype
+  pk: 1
+  fields: {app_label: newsletter, model: subscriber}
+- model: contenttypes.contenttype
+  pk: 2
+  fields: {app_label: partners, model: businessarea}
+- model: contenttypes.contenttype
+  pk: 3
+  fields: {app_label: partners, model: partner}
+- model: contenttypes.contenttype
+  pk: 4
+  fields: {app_label: contact_us, model: contact}
+- model: contenttypes.contenttype
+  pk: 5
+  fields: {app_label: tft, model: sizetft}
+- model: contenttypes.contenttype
+  pk: 6
+  fields: {app_label: tft, model: brandtft}
+- model: contenttypes.contenttype
+  pk: 7
+  fields: {app_label: tft, model: resolutiontft}
+- model: contenttypes.contenttype
+  pk: 8
+  fields: {app_label: tft, model: interfacetft}
+- model: contenttypes.contenttype
+  pk: 9
+  fields: {app_label: tft, model: tft}
+- model: contenttypes.contenttype
+  pk: 10
+  fields: {app_label: lcd, model: lcd}
+- model: contenttypes.contenttype
+  pk: 11
+  fields: {app_label: oled, model: oled}
+- model: contenttypes.contenttype
+  pk: 12
+  fields: {app_label: epaper, model: epaper}
+- model: contenttypes.contenttype
+  pk: 13
+  fields: {app_label: custom, model: custom}
+- model: contenttypes.contenttype
+  pk: 14
+  fields: {app_label: panel_printers, model: panel_printers}
+- model: contenttypes.contenttype
+  pk: 15
+  fields: {app_label: mobile_printers, model: mobile_printers}
+- model: contenttypes.contenttype
+  pk: 16
+  fields: {app_label: admin, model: logentry}
+- model: contenttypes.contenttype
+  pk: 17
+  fields: {app_label: auth, model: permission}
+- model: contenttypes.contenttype
+  pk: 18
+  fields: {app_label: auth, model: group}
+- model: contenttypes.contenttype
+  pk: 19
+  fields: {app_label: auth, model: user}
+- model: contenttypes.contenttype
+  pk: 20
+  fields: {app_label: contenttypes, model: contenttype}
+- model: contenttypes.contenttype
+  pk: 21
+  fields: {app_label: sessions, model: session}
+- model: sessions.session
+  pk: oecoecoogt64xfw8c6emjvua1efg6vqu
+  fields: {session_data: MTY0N2E2OTVjZTEzYTEyMjFlMzg4ZDg4YjNmM2JmNjY3ZjI0ODM2Zjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiJhYzYzNTZlMzMyZmI2MmFmMDBhZjEzNTZjNzZiZTI2ZTU1NTQxMmQyIn0=,
+    expire_date: ! '2016-08-01 12:05:06.022771+00:00'}
+- model: auth.permission
+  pk: 1
+  fields: {name: Can add subscriber, content_type: 1, codename: add_subscriber}
+- model: auth.permission
+  pk: 2
+  fields: {name: Can change subscriber, content_type: 1, codename: change_subscriber}
+- model: auth.permission
+  pk: 3
+  fields: {name: Can delete subscriber, content_type: 1, codename: delete_subscriber}
+- model: auth.permission
+  pk: 4
+  fields: {name: Can add business area, content_type: 2, codename: add_businessarea}
+- model: auth.permission
+  pk: 5
+  fields: {name: Can change business area, content_type: 2, codename: change_businessarea}
+- model: auth.permission
+  pk: 6
+  fields: {name: Can delete business area, content_type: 2, codename: delete_businessarea}
+- model: auth.permission
+  pk: 7
+  fields: {name: Can add partner, content_type: 3, codename: add_partner}
+- model: auth.permission
+  pk: 8
+  fields: {name: Can change partner, content_type: 3, codename: change_partner}
+- model: auth.permission
+  pk: 9
+  fields: {name: Can delete partner, content_type: 3, codename: delete_partner}
+- model: auth.permission
+  pk: 10
+  fields: {name: Can add contact, content_type: 4, codename: add_contact}
+- model: auth.permission
+  pk: 11
+  fields: {name: Can change contact, content_type: 4, codename: change_contact}
+- model: auth.permission
+  pk: 12
+  fields: {name: Can delete contact, content_type: 4, codename: delete_contact}
+- model: auth.permission
+  pk: 13
+  fields: {name: Can add size tft, content_type: 5, codename: add_sizetft}
+- model: auth.permission
+  pk: 14
+  fields: {name: Can change size tft, content_type: 5, codename: change_sizetft}
+- model: auth.permission
+  pk: 15
+  fields: {name: Can delete size tft, content_type: 5, codename: delete_sizetft}
+- model: auth.permission
+  pk: 16
+  fields: {name: Can add brand tft, content_type: 6, codename: add_brandtft}
+- model: auth.permission
+  pk: 17
+  fields: {name: Can change brand tft, content_type: 6, codename: change_brandtft}
+- model: auth.permission
+  pk: 18
+  fields: {name: Can delete brand tft, content_type: 6, codename: delete_brandtft}
+- model: auth.permission
+  pk: 19
+  fields: {name: Can add resolution tft, content_type: 7, codename: add_resolutiontft}
+- model: auth.permission
+  pk: 20
+  fields: {name: Can change resolution tft, content_type: 7, codename: change_resolutiontft}
+- model: auth.permission
+  pk: 21
+  fields: {name: Can delete resolution tft, content_type: 7, codename: delete_resolutiontft}
+- model: auth.permission
+  pk: 22
+  fields: {name: Can add interface tft, content_type: 8, codename: add_interfacetft}
+- model: auth.permission
+  pk: 23
+  fields: {name: Can change interface tft, content_type: 8, codename: change_interfacetft}
+- model: auth.permission
+  pk: 24
+  fields: {name: Can delete interface tft, content_type: 8, codename: delete_interfacetft}
+- model: auth.permission
+  pk: 25
+  fields: {name: Can add tft, content_type: 9, codename: add_tft}
+- model: auth.permission
+  pk: 26
+  fields: {name: Can change tft, content_type: 9, codename: change_tft}
+- model: auth.permission
+  pk: 27
+  fields: {name: Can delete tft, content_type: 9, codename: delete_tft}
+- model: auth.permission
+  pk: 28
+  fields: {name: Can add lcd, content_type: 10, codename: add_lcd}
+- model: auth.permission
+  pk: 29
+  fields: {name: Can change lcd, content_type: 10, codename: change_lcd}
+- model: auth.permission
+  pk: 30
+  fields: {name: Can delete lcd, content_type: 10, codename: delete_lcd}
+- model: auth.permission
+  pk: 31
+  fields: {name: Can add oled, content_type: 11, codename: add_oled}
+- model: auth.permission
+  pk: 32
+  fields: {name: Can change oled, content_type: 11, codename: change_oled}
+- model: auth.permission
+  pk: 33
+  fields: {name: Can delete oled, content_type: 11, codename: delete_oled}
+- model: auth.permission
+  pk: 34
+  fields: {name: Can add epaper, content_type: 12, codename: add_epaper}
+- model: auth.permission
+  pk: 35
+  fields: {name: Can change epaper, content_type: 12, codename: change_epaper}
+- model: auth.permission
+  pk: 36
+  fields: {name: Can delete epaper, content_type: 12, codename: delete_epaper}
+- model: auth.permission
+  pk: 37
+  fields: {name: Can add custom, content_type: 13, codename: add_custom}
+- model: auth.permission
+  pk: 38
+  fields: {name: Can change custom, content_type: 13, codename: change_custom}
+- model: auth.permission
+  pk: 39
+  fields: {name: Can delete custom, content_type: 13, codename: delete_custom}
+- model: auth.permission
+  pk: 40
+  fields: {name: Can add panel_printers, content_type: 14, codename: add_panel_printers}
+- model: auth.permission
+  pk: 41
+  fields: {name: Can change panel_printers, content_type: 14, codename: change_panel_printers}
+- model: auth.permission
+  pk: 42
+  fields: {name: Can delete panel_printers, content_type: 14, codename: delete_panel_printers}
+- model: auth.permission
+  pk: 43
+  fields: {name: Can add mobile_printers, content_type: 15, codename: add_mobile_printers}
+- model: auth.permission
+  pk: 44
+  fields: {name: Can change mobile_printers, content_type: 15, codename: change_mobile_printers}
+- model: auth.permission
+  pk: 45
+  fields: {name: Can delete mobile_printers, content_type: 15, codename: delete_mobile_printers}
+- model: auth.permission
+  pk: 46
+  fields: {name: Can add log entry, content_type: 16, codename: add_logentry}
+- model: auth.permission
+  pk: 47
+  fields: {name: Can change log entry, content_type: 16, codename: change_logentry}
+- model: auth.permission
+  pk: 48
+  fields: {name: Can delete log entry, content_type: 16, codename: delete_logentry}
+- model: auth.permission
+  pk: 49
+  fields: {name: Can add permission, content_type: 17, codename: add_permission}
+- model: auth.permission
+  pk: 50
+  fields: {name: Can change permission, content_type: 17, codename: change_permission}
+- model: auth.permission
+  pk: 51
+  fields: {name: Can delete permission, content_type: 17, codename: delete_permission}
+- model: auth.permission
+  pk: 52
+  fields: {name: Can add group, content_type: 18, codename: add_group}
+- model: auth.permission
+  pk: 53
+  fields: {name: Can change group, content_type: 18, codename: change_group}
+- model: auth.permission
+  pk: 54
+  fields: {name: Can delete group, content_type: 18, codename: delete_group}
+- model: auth.permission
+  pk: 55
+  fields: {name: Can add user, content_type: 19, codename: add_user}
+- model: auth.permission
+  pk: 56
+  fields: {name: Can change user, content_type: 19, codename: change_user}
+- model: auth.permission
+  pk: 57
+  fields: {name: Can delete user, content_type: 19, codename: delete_user}
+- model: auth.permission
+  pk: 58
+  fields: {name: Can add content type, content_type: 20, codename: add_contenttype}
+- model: auth.permission
+  pk: 59
+  fields: {name: Can change content type, content_type: 20, codename: change_contenttype}
+- model: auth.permission
+  pk: 60
+  fields: {name: Can delete content type, content_type: 20, codename: delete_contenttype}
+- model: auth.permission
+  pk: 61
+  fields: {name: Can add session, content_type: 21, codename: add_session}
+- model: auth.permission
+  pk: 62
+  fields: {name: Can change session, content_type: 21, codename: change_session}
+- model: auth.permission
+  pk: 63
+  fields: {name: Can delete session, content_type: 21, codename: delete_session}
+- model: auth.user
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$24000$PldxZ83LnCFS$iwAzuC6Ex64bv30zcWvnoWh6ScZgX0yCIz7ntflJnaI=
+    last_login: 2016-07-18 12:05:05.909771+00:00
+    is_superuser: true
+    username: da
+    first_name: ''
+    last_name: ''
+    email: ''
+    is_staff: true
+    is_active: true
+    date_joined: 2016-07-18 12:04:46.558372+00:00
+    groups: []
+    user_permissions: []
+- model: auth.user
+  pk: 2
+  fields:
+    password: pbkdf2_sha256$24000$szCK2xQjnwXC$6Q6gNjA74XXtsLilX6rIAZQY9hCSbaCpoWW9E2Gsn5A=
+    last_login: null
+    is_superuser: false
+    username: toto
+    first_name: ToF
+    last_name: ToL
+    email: optodummy@gmail.com
+    is_staff: false
+    is_active: true
+    date_joined: 2016-07-18 12:21:38+00:00
+    groups: []
+    user_permissions: []
+- model: admin.logentry
+  pk: 1
+  fields: {action_time: ! '2016-07-18 12:21:39.038790+00:00', user: 1, content_type: 19,
+    object_id: '2', object_repr: toto, action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 2
+  fields: {action_time: ! '2016-07-18 12:21:58.752356+00:00', user: 1, content_type: 2,
+    object_id: '1', object_repr: TFT, action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 3
+  fields: {action_time: ! '2016-07-18 12:23:00.853338+00:00', user: 1, content_type: 1,
+    object_id: '1', object_repr: toto, action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 4
+  fields: {action_time: ! '2016-07-18 12:25:04.684243+00:00', user: 1, content_type: 19,
+    object_id: '2', object_repr: toto, action_flag: 2, change_message: 'Changed first_name,
+      last_name and email.'}
+- model: admin.logentry
+  pk: 5
+  fields: {action_time: ! '2016-07-18 12:26:42.835632+00:00', user: 1, content_type: 2,
+    object_id: '2', object_repr: LCD, action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 6
+  fields: {action_time: ! '2016-07-18 12:26:45.999949+00:00', user: 1, content_type: 1,
+    object_id: '1', object_repr: TOL ToF, action_flag: 2, change_message: Changed
+      interest.}
+- model: admin.logentry
+  pk: 7
+  fields: {action_time: ! '2016-07-18 13:19:46.718476+00:00', user: 1, content_type: 2,
+    object_id: '3', object_repr: LASER DIODE, action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 8
+  fields: {action_time: ! '2016-07-18 13:20:09.475476+00:00', user: 1, content_type: 2,
+    object_id: '4', object_repr: OLED, action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 9
+  fields: {action_time: ! '2016-07-18 13:20:19.538476+00:00', user: 1, content_type: 2,
+    object_id: '5', object_repr: EPAPER, action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 10
+  fields: {action_time: ! '2016-07-18 13:20:36.222469+00:00', user: 1, content_type: 2,
+    object_id: '6', object_repr: INDUSTRIAL PC, action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 11
+  fields: {action_time: ! '2016-07-18 13:20:45.437465+00:00', user: 1, content_type: 2,
+    object_id: '7', object_repr: SOM, action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 12
+  fields: {action_time: ! '2016-07-18 13:21:02.263463+00:00', user: 1, content_type: 2,
+    object_id: '8', object_repr: THERMAL PRINTER, action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 13
+  fields: {action_time: ! '2016-07-18 13:21:23.314457+00:00', user: 1, content_type: 2,
+    object_id: '9', object_repr: TOUCH PANEL, action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 14
+  fields: {action_time: ! '2016-07-18 13:22:00.402457+00:00', user: 1, content_type: 3,
+    object_id: '1', object_repr: Data Image Corp., action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 15
+  fields: {action_time: ! '2016-07-18 13:22:53.100457+00:00', user: 1, content_type: 3,
+    object_id: '1', object_repr: Data Image Corp., action_flag: 2, change_message: Changed
+      logo.}
+- model: admin.logentry
+  pk: 16
+  fields: {action_time: ! '2016-07-18 13:23:52.264457+00:00', user: 1, content_type: 2,
+    object_id: '4', object_repr: OLED, action_flag: 2, change_message: Changed weight.}
+- model: admin.logentry
+  pk: 17
+  fields: {action_time: ! '2016-07-18 13:24:06.674457+00:00', user: 1, content_type: 2,
+    object_id: '5', object_repr: EPAPER, action_flag: 2, change_message: Changed weight.}
+- model: admin.logentry
+  pk: 18
+  fields: {action_time: ! '2016-07-18 13:29:38.322485+00:00', user: 1, content_type: 6,
+    object_id: '1', object_repr: Data Image Corp., action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 19
+  fields: {action_time: ! '2016-07-18 13:30:06.800321+00:00', user: 1, content_type: 5,
+    object_id: '1', object_repr: 10.4 ", action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 20
+  fields: {action_time: ! '2016-07-18 13:30:21.197755+00:00', user: 1, content_type: 8,
+    object_id: '1', object_repr: LVDS, action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 21
+  fields: {action_time: ! '2016-07-18 13:30:30.245644+00:00', user: 1, content_type: 8,
+    object_id: '2', object_repr: TTL, action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 22
+  fields: {action_time: ! '2016-07-18 13:30:51.308728+00:00', user: 1, content_type: 7,
+    object_id: '1', object_repr: 800 x RGB x 600 VGA, action_flag: 1, change_message: Added.}
+- model: admin.logentry
+  pk: 23
+  fields: {action_time: ! '2016-07-18 13:32:12.881767+00:00', user: 1, content_type: 9,
+    object_id: '1', object_repr: FG0507DWSVXEQEDEX12 (00.00.00000), action_flag: 1,
+    change_message: Added.}
+- model: admin.logentry
+  pk: 24
+  fields: {action_time: ! '2016-07-18 14:42:20.754263+00:00', user: 1, content_type: 2,
+    object_id: '9', object_repr: TOUCH-PANEL, action_flag: 2, change_message: Changed
+      area.}
+- model: admin.logentry
+  pk: 25
+  fields: {action_time: ! '2016-07-18 14:42:28.737050+00:00', user: 1, content_type: 2,
+    object_id: '8', object_repr: THERMAL-PRINTER, action_flag: 2, change_message: Changed
+      area.}
+- model: admin.logentry
+  pk: 26
+  fields: {action_time: ! '2016-07-18 14:42:53.635152+00:00', user: 1, content_type: 2,
+    object_id: '6', object_repr: INDUSTRIAL-PC, action_flag: 2, change_message: Changed
+      area.}
+- model: admin.logentry
+  pk: 27
+  fields: {action_time: ! '2016-07-18 14:43:01.475936+00:00', user: 1, content_type: 2,
+    object_id: '3', object_repr: LASER-DIODE, action_flag: 2, change_message: Changed
+      area.}
+- model: newsletter.subscriber
+  pk: 1
+  fields:
+    user: 2
+    interest: [1, 2]

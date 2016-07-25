@@ -1,18 +1,22 @@
 {% load staticfiles %}
+{% load i18n %}
+
 <div class="container">
     <div class="row mb-xl">
         <div class="col-md-12 center">
-            <h2 class="mb-xl"><strong>Who</strong> We Are</h2>
-            <p>Our company started its activities as an independent limited company in 1992, after having been part of
+            <h2 class="mb-xl"><strong>{% trans "Who" %}</strong>{% trans "We Are" %}</h2>
+            <p>{% blocktrans %}
+                Our company started its activities as an independent limited company in 1992, after having been part of
                 CCP Integration Group. Originally named Opto Logic SA, in Le Mont-sur-Lausanne, it was then registered
                 under the actual name of Opto Logic Technology SA, Châtel-Saint-Denis, in 1997.
 
                 For more than 15 years, we specialize in counselling, import and selling of high quality electronic
                 components for the industry. In close cooperation with the engineers involved in the project,
                 we assist our customers in the choice of standard components, or by developing partial or full
-                customized parts. </p>
+                customized parts.
+                {% endblocktrans %}</p>
 
-            <a href="{% url 'about_us' %}" class="btn btn-color btn-primary btn-lg mr-xs mb-sm">Read More</a>
+            <a href="{% url 'about_us' %}" class="btn btn-color btn-primary btn-lg mr-xs mb-sm">{% trans "Read More" %}</a>
         </div>
     </div>
 </div>

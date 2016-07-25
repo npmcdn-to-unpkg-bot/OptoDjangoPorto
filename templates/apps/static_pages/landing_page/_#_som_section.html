@@ -1,4 +1,6 @@
 {% load staticfiles %}
+{% load i18n %}
+
 <section class="section section-with-divider">
     <div class="divider divider-style-3 divider-primary taller">
         <i class="fa fa-chevron-down"></i>
@@ -9,12 +11,12 @@
             <hr class="short mb-lg">
             <div class="col-md-6">
                 <p class="lead text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci.
+                    {% trans "This is where Systems on module are made with meat flavor and candy juice" %}
                 </p>
                 <p class="mt-lg text-justify">
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent scelerisque volutpat turpis, eu hendrerit enim scel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent scelerisque volutpat turpis, eu hendrerit enim scel.
+                     {% trans "This is where Systems on module are made with meat flavor and candy juice" %}
                 </p>
-                <a href="{% url 'tft:tft_list' %}" type="button" class="btn btn-primary btn-lg">Read More</a>
+                <a href="{% url 'tft:tft_list' %}" type="button" class="btn btn-primary btn-lg">{% trans "Read More" %}</a>
             </div>
             <div class="col-md-6 ">
                 <img class="img-responsive appear-animation" src="{% static 'media/img/som/som_picture.png' %}" data-appear-animation="fadeInRight" alt="">

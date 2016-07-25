@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load i18n %}
 
 <section id="lcd" class="section section-no-background section-with-divider mt-none mb-none pt-none">
     <div class="divider divider-style-3 divider-primary taller">
@@ -10,19 +11,12 @@
             <hr>
             <div class="col-md-6">
                 <p class="lead text-justify">
-                    This is the place where LCD Segments informations are needed
-                    This is the place where LCD Segments informations are needed
-                    This is the place where LCD Segments informations are needed
-                    This is the place where LCD Segments informations are needed
+                    {% trans "This is the place where LCD Segments informations are grown with unicorn milk and love." %}
                 </p>
                 <p class="mt-lg text-justify">
-                    This text is supposed to be the second part of informations about LCD Segments
-                    This text is supposed to be the second part of informations about LCD Segments
-                    This text is supposed to be the second part of informations about LCD Segments
-                    This text is supposed to be the second part of informations about LCD Segments
-                    This text is supposed to be the second part of informations about LCD Segments
+                    {% trans "This is the place where LCD Segments informations are grown with unicorn milk and love." %}
                 </p>
-                <a href="{% url 'tft:tft_list' %}" type="button" class="btn btn-primary btn-lg appear-animation bounceInRight appear-animation-visible">Read More</a>
+                <a href="{% url 'tft:tft_list' %}" type="button" class="btn btn-primary btn-lg appear-animation bounceInRight appear-animation-visible">{% trans "Read More" %}</a>
             </div>
             <div class="col-md-6 mt-lg">
                 <img class="img-responsive appear-animation" src="{% static 'media/img/static_pages/landing_page/lcd_segment.png' %}" data-appear-animation="fadeInRight" alt="lcd segment" style="max-height:250px">
@@ -41,21 +35,13 @@
             </div>
             <div class="col-md-6">
                 <p class="lead text-justify">
-                    This is the place where LCD Graphic informations are needed
-                    This is the place where LCD Graphic informations are needed
-                    This is the place where LCD Graphic informations are needed
+                    {% trans "This is the place where LCD Segments informations are grown with unicorn milk and love" %}
                 </p>
                 <p class="mt-lg text-justify">
-                    This text is supposed to be the second part of informations about LCD Segments
-                    This text is supposed to be the second part of informations about LCD Segments
-                    This text is supposed to be the second part of informations about LCD Segments
-                    This text is supposed to be the second part of informations about LCD Segments
-                    This text is supposed to be the second part of informations about LCD Segments
-                    This text is supposed to be the second part of informations about LCD Segments
+                    {% trans "This text is supposed to be the second part of informations about LCD Segments" %}
                 </p>
-                <a href="{% url 'lcd' %}" type="button" class="btn btn-primary btn-lg align-right appear-animation bounceInLeft appear-animation-visible">Read More</a>
+                <a href="{% url 'lcd' %}" type="button" class="btn btn-primary btn-lg align-right appear-animation bounceInLeft appear-animation-visible">{% trans "Read More" %}</a>
             </div>
         </div>
     </div>
-
 </section>

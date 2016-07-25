@@ -1,11 +1,13 @@
 {% load staticfiles %}
+{% load i18n %}
+
 
 <section class="section section-default  section-no-background">
     <div class="row">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 center">
-                    <h2 class="heading-dark">Our <strong>Expertise</strong></h2>
+                    <h2 class="heading-dark">{% trans "Our" %} <strong>{% trans "Expertise" %}</strong></h2>
                 </div>
             </div>
             <hr>
@@ -28,7 +30,7 @@
                         </div>
                         <div class="feature-box-info">
                             <h4 class="mb-sm">ePaper</h4>
-                            <p class="mb-lg">Boring Talking about ePaper.</p>
+                            <p class="mb-lg">{% trans "This location is dedicated for EPAPER Hide and Sneak players " %}</p>
                         </div>
                     </div>
                 </div>
@@ -39,7 +41,7 @@
                         </div>
                         <div class="feature-box-info">
                             <h4 class="mb-sm">Colour TFT & LCD displays</h4>
-                            <p class="mb-lg">The story of a LCD playing tenis against a TFT.</p>
+                            <p class="mb-lg">{% trans "The story of a LCD playing tenis against a TFT." %}</p>
                         </div>
                     </div>
                 </div>
@@ -51,8 +53,8 @@
                             <img class="" src="{% static 'media/icons/oled_icon_64.svg' %}" height="50">
                         </div>
                         <div class="feature-box-info">
-                            <h4 class="mb-sm">Monochrome and full color OLED displays</h4>
-                            <p class="mb-lg">One to millions colors for you beautiful eyes.</p>
+                            <h4 class="mb-sm">{% trans "Monochrome and full color OLED displays" %}</h4>
+                            <p class="mb-lg">{% trans "One to millions colors for you beautiful eyes." %}</p>
                         </div>
                     </div>
                 </div>
@@ -62,8 +64,8 @@
                             <img class="" src="{% static 'media/icons/touch_icon_64.svg' %}" height="50">
                         </div>
                         <div class="feature-box-info">
-                            <h4 class="mb-sm">Resistive and capacitive touch panels</h4>
-                            <p class="mb-lg">The most resistive, the most capacitive, not in To.</p>
+                            <h4 class="mb-sm">{% trans "Resistive and capacitive touch panels" %}</h4>
+                            <p class="mb-lg">{% trans "The most resistive, the most capacitive, not in To." %}</p>
                         </div>
                     </div>
                 </div>
@@ -73,8 +75,8 @@
                             <img class="" src="{% static 'media/icons/printer_icon.svg' %}" height="50">
                         </div>
                         <div class="feature-box-info">
-                            <h4 class="mb-sm">Thermal and matrix printers.</h4>
-                            <p class="mb-lg">Followed by Morpheus and Neo.</p>
+                            <h4 class="mb-sm">{% trans "Thermal and matrix printers." %}</h4>
+                            <p class="mb-lg">{% trans "Followed by Morpheus and Neo." %}</p>
                         </div>
                     </div>
                 </div>
@@ -86,8 +88,8 @@
                             <i class="icon-screen-desktop icons"></i>
                         </div>
                         <div class="feature-box-info">
-                            <h4 class="mb-sm">Industrial PCs and monitors.</h4>
-                            <p class="mb-lg">No gas, no coal, no uranium.</p>
+                            <h4 class="mb-sm">{% trans "Industrial PCs and monitors." %}</h4>
+                            <p class="mb-lg">{% trans "No gas, no coal, no uranium." %}</p>
                         </div>
                     </div>
                 </div>
@@ -97,8 +99,8 @@
                             <img class="" src="{% static 'media/icons/embedded_pc_icon_64.svg' %}" height="50">
                         </div>
                         <div class="feature-box-info">
-                            <h4 class="mb-sm">Embedded PCs.</h4>
-                            <p class="mb-lg">Not in your pocket, but sure it will find its place.</p>
+                            <h4 class="mb-sm">{% trans "Embedded PCs." %}</h4>
+                            <p class="mb-lg">{% trans "Not in your pocket, but sure it will find its place." %}</p>
                         </div>
                     </div>
                 </div>
@@ -110,7 +112,7 @@
                         </div>
                         <div class="feature-box-info">
                             <h4 class="mb-sm">SOM</h4>
-                            <p class="mb-lg">Is that a system in your pocket?.</p>
+                            <p class="mb-lg">{% trans "Is that a system in your pocket?." %}</p>
                         </div>
                     </div>
                 </div>

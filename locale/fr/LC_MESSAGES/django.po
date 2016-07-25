@@ -1,0 +1,281 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-25 16:43+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\OptoDjangoPorto\settings.py:154
+msgid "French"
+msgstr "Français"
+
+#: .\OptoDjangoPorto\settings.py:155
+msgid "English"
+msgstr "Anglais"
+
+#: .\OptoDjangoPorto\settings.py:156
+msgid "German"
+msgstr "Allemand"
+
+#: .\templates\_topnav.html:36
+#, fuzzy
+#| msgid "Hello boy!"
+msgid "\"Hello boy!\""
+msgstr "Salut mec!"
+
+#: .\templates\apps\newsletter\subscription_subscribe.html:5
+#: .\templates\apps\newsletter\subscription_subscribe.html:8
+msgid "Newsletter subscribe"
+msgstr "Abonnement à la Newsletter"
+
+#: .\templates\apps\newsletter\subscription_subscribe.html:11
+msgid ""
+"Due to a technical error we were not able to submit your confirmation email. "
+"This could be because your email address is invalid."
+msgstr ""
+" En raison d'une erreur technique nous ne sommes pas en mesure de soumettre "
+"votre email de confirmation .  Cela pourrait être parce que votre adresse e-"
+"mail est invalide . "
+
+#: .\templates\apps\newsletter\subscription_subscribe.html:23
+msgid "Subscribe"
+msgstr "Abonnez-vous"
+
+#: .\templates\apps\static_pages\landing_page\_#_counter_section.html:11
+msgid "PlaceHolder"
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_#_counter_section.html:17
+msgid "Years in Business"
+msgstr "Années dans le Business"
+
+#: .\templates\apps\static_pages\landing_page\_#_counter_section.html:23
+#, fuzzy
+#| msgid "Projects Developed"
+msgid "Projects Developed each year"
+msgstr "Projet dévelopé chaque année"
+
+#: .\templates\apps\static_pages\landing_page\_#_counter_section.html:29
+msgid "Sales Areas"
+msgstr "Pays approvisionnées"
+
+#: .\templates\apps\static_pages\landing_page\_#_epaper_section.html:9
+#: .\templates\apps\static_pages\landing_page\_#_epaper_section.html:12
+msgid ""
+"This is the place where puppy TFT Displays are grown with unicorn milk and "
+"love."
+msgstr ""
+"L'endroit ou les jeunes Tfts sont cultivés avec du lait de licorne et amour."
+
+#: .\templates\apps\static_pages\landing_page\_#_epaper_section.html:14
+#: .\templates\apps\static_pages\landing_page\_#_lcd_section.html:19
+#: .\templates\apps\static_pages\landing_page\_#_lcd_section.html:43
+#: .\templates\apps\static_pages\landing_page\_#_oled_section.html:14
+#: .\templates\apps\static_pages\landing_page\_#_som_section.html:19
+#: .\templates\apps\static_pages\landing_page\_3_whoweare.html:19
+msgid "Read More"
+msgstr "En savoir plus"
+
+#: .\templates\apps\static_pages\landing_page\_#_lcd_section.html:14
+#: .\templates\apps\static_pages\landing_page\_#_lcd_section.html:17
+msgid ""
+"This is the place where LCD Segments informations are grown with unicorn "
+"milk and love."
+msgstr ""
+"L'endroit ou l'on fait pousser les jeunes Tfts avec du lait de licorne et "
+"amour."
+
+#: .\templates\apps\static_pages\landing_page\_#_lcd_section.html:38
+msgid ""
+"This is the place where LCD Segments informations are grown with unicorn "
+"milk and love"
+msgstr ""
+"L'endroit ou l'on fait pousser les jeunes LCDS avec du lait de licorne et "
+"amour."
+
+#: .\templates\apps\static_pages\landing_page\_#_lcd_section.html:41
+msgid ""
+"This text is supposed to be the second part of informations about LCD "
+"Segments"
+msgstr ""
+"Ce text est supposé la seconde partie d'information sur les LCD "
+"SegmentsL'endroit ou l'on fait pousser les jeunes LCDS segment avec du lait "
+"de licorne et amour."
+
+#: .\templates\apps\static_pages\landing_page\_#_oled_section.html:9
+#: .\templates\apps\static_pages\landing_page\_#_oled_section.html:12
+msgid "This is where OLED are made with meat flavor and candy juice"
+msgstr ""
+"L'endroit ou l'on fait pousser les jeunes OLEDs avec du lait de licorne et "
+"amour."
+
+#: .\templates\apps\static_pages\landing_page\_#_som_section.html:14
+#: .\templates\apps\static_pages\landing_page\_#_som_section.html:17
+msgid ""
+"This is where Systems on module are made with meat flavor and candy juice"
+msgstr ""
+"L'endroit ou l'on fait pousser les jeunes SOM avec du lait de licorne et "
+"amour."
+
+#: .\templates\apps\static_pages\landing_page\_1_slideshow.html:26
+msgid "DO YOU NEED A NEW"
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_1_slideshow.html:47
+msgid "Please visit our TFTs section"
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_1_slideshow.html:84
+msgid "Think"
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_1_slideshow.html:98
+msgid "turn key solutions!"
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_1_slideshow.html:109
+msgid "Learn more"
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_1_slideshow.html:133
+msgid "easy to"
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_1_slideshow.html:140
+msgid "customize!"
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_1_slideshow.html:149
+msgid "DESIGN IT!"
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_1_slideshow.html:162
+msgid "we can adapt to your project, contact us!"
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_2_teaser.html:10
+msgid "The fastest way to develop your custom project"
+msgstr "La façon la plus rapide de developer votre projet personnalisé"
+
+#: .\templates\apps\static_pages\landing_page\_2_teaser.html:11
+msgid "Please contact us, to study your needs."
+msgstr "Contactez-nous pour que nous puissions ensemble étudiez vos besoin"
+
+#: .\templates\apps\static_pages\landing_page\_2_teaser.html:16
+msgid "Contact us Now!"
+msgstr "Contactez-nous!"
+
+#: .\templates\apps\static_pages\landing_page\_2_teaser.html:17
+msgid "Learn more."
+msgstr "En savoir plus."
+
+#: .\templates\apps\static_pages\landing_page\_3_whoweare.html:7
+msgid "Who"
+msgstr "Qui"
+
+#: .\templates\apps\static_pages\landing_page\_3_whoweare.html:7
+msgid "We Are"
+msgstr "Nous Sommes"
+
+#: .\templates\apps\static_pages\landing_page\_3_whoweare.html:8
+msgid ""
+"\n"
+"                Our company started its activities as an independent limited "
+"company in 1992, after having been part of\n"
+"                CCP Integration Group. Originally named Opto Logic SA, in Le "
+"Mont-sur-Lausanne, it was then registered\n"
+"                under the actual name of Opto Logic Technology SA, Châtel-"
+"Saint-Denis, in 1997.\n"
+"\n"
+"                For more than 15 years, we specialize in counselling, import "
+"and selling of high quality electronic\n"
+"                components for the industry. In close cooperation with the "
+"engineers involved in the project,\n"
+"                we assist our customers in the choice of standard "
+"components, or by developing partial or full\n"
+"                customized parts.\n"
+"                "
+msgstr ""
+"\n"
+"               Notre compagnie commence ses activité en 1992"
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:10
+msgid "Our"
+msgstr "Notre"
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:10
+msgid "Expertise"
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:33
+#, fuzzy
+#| msgid "This location is dedicated for EPAPER Hide and Sneak players."
+msgid "This location is dedicated for EPAPER Hide and Sneak players "
+msgstr "Cette endroit est dédié aux Joueurs EPAPER de cache cache."
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:44
+msgid "The story of a LCD playing tenis against a TFT."
+msgstr "L'Histoire d'un LCD jouant au tenis contre un TFT."
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:56
+msgid "Monochrome and full color OLED displays"
+msgstr "afficheur OLED monochrome et couleur"
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:57
+msgid "One to millions colors for you beautiful eyes."
+msgstr "Un à plusieurs millions de couleur pour vos beaux yeux"
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:67
+msgid "Resistive and capacitive touch panels"
+msgstr "Touch Panel resistif ou capacitif"
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:68
+msgid "The most resistive, the most capacitive, not in To."
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:78
+msgid "Thermal and matrix printers."
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:79
+msgid "Followed by Morpheus and Neo."
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:91
+msgid "Industrial PCs and monitors."
+msgstr "PCs Industriels et moniteurs"
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:92
+msgid "No gas, no coal, no uranium."
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:102
+msgid "Embedded PCs."
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:103
+msgid "Not in your pocket, but sure it will find its place."
+msgstr ""
+
+#: .\templates\apps\static_pages\landing_page\_4_services.html:115
+msgid "Is that a system in your pocket?."
+msgstr "Système sur modules"
+
+#~ msgid "Bonjour les nouveaux !"
+#~ msgstr "Hello newbies !"
+
+#~ msgid "Happy Clients"
+#~ msgstr "Clients Satisfaits"

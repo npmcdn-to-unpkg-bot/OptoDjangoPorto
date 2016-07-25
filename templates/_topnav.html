@@ -1,5 +1,7 @@
 {% load staticfiles %}
-<!-- TODO Setup the activation of topnav li -->
+
+{% load i18n %}
+
 <header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": true}'>
 	<div class="header-body">
 		<div class="header-container container">
@@ -27,19 +29,41 @@
 							<ul class="nav nav-pills">
 								<li class="hidden-xs">
 									<a href="{% url 'about_us' %}"><i class="fa fa-angle-right"></i> About Us</a>
-								</li>
-								<li class="hidden-xs">
 									<a href="{% url 'contact_us' %}"><i class="fa fa-angle-right"></i> Contact Us</a>
 								</li>
 								<li>
+
+								{% blocktrans %}"Hello boy!"{% endblocktrans %}
+
+								<form action="/i18n/setlang/" method="post">
+
+									{% csrf_token %}
+
+									<input name="next" type="hidden" value="#" />
+
+									<select name="language">
+
+									{% for lang in LANGUAGES %}
+
+										<option value="{{ lang.0 }}">{{ lang.1 }}</option>
+
+									{% endfor %}
+
+									</select>
+
+									<input type="submit" />
+
+								</form>
+
+								</li>
+								<li class="hidden-xs">
 									<a href="#" class="dropdown-menu-toggle" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-										<img src="{% static 'media/img/blank.gif' %}" class="flag flag-ch" alt="English" /> English
+										<img src="{% static 'media/img/blank.gif' %}" class="flag flag-gb" alt="English" /> English
 										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownLanguage">
-										<li><a href="#"><img src="{% static 'media/img/blank.gif' %}" class="flag flag-ch" alt="English" /> English</a></li>
-										<li><a href="#"><img src="{% static 'media/img/blank.gif' %}" class="flag flag-ch" alt="Deutch" /> Deutch</a></li>
-										<li><a href="#"><img src="{% static 'media/img/blank.gif' %}" class="flag flag-ch" alt="Français" /> Française</a></li>
+										<li><a href="#"><img src="{% static 'media/img/blank.gif' %}" class="flag flag-fr" alt="Français" /> Français</a></li>
+										<li><a href="#"><img src="{% static 'media/img/blank.gif' %}" class="flag flag-de" alt="Deutsch" /> Deutsch</a></li>
 									</ul>
 								</li>
 								<li class="hidden-xs">
