@@ -75,3 +75,6 @@
 .button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
 
 
+#option_lang{
+ color: #999;
+}

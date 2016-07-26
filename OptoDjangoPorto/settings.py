@@ -148,12 +148,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 # https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-django/l-internationalisation-1
 
-LANGUAGE_CODE = 'en-GB'
+LANGUAGE_CODE = 'en-US'
 
 LANGUAGES = (
-    ('fr', _('French')),
-    ('en', _('English')),
-    ('de', _('German')),
+    ('fr', 'Français'),
+    ('en', 'English'),
+    ('de', 'Deutsch'),
 )
 
 TIME_ZONE = 'UTC'
@@ -175,8 +175,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     # '/var/www/static/',
 ]
-LOCALE_PATH = (
-    os.path.join(BASE_DIR, '/locale'),
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
 
 )
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, '../static/media/partners_logo')

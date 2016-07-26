@@ -44,7 +44,7 @@ urlpatterns = [
     url(r'^pos_systems/', include('apps.products.others.pos_systems.urls')),
     url(r'^i18n/', include('django.conf.urls.i18n')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
+'''
 urlpatterns += i18n_patterns(
     url(r'^admin/', admin.site.urls),
     url(r"^", include('apps.static_pages.landing_page.urls')),
@@ -70,6 +70,6 @@ urlpatterns += i18n_patterns(
     url(r'^pos_systems/', include('apps.products.others.pos_systems.urls')),
     url(r'^i18n/', include('django.conf.urls.i18n')),
 )
-
+'''
 
 urlpatterns += [url(r'^uml/', include('django_spaghetti.urls'))]

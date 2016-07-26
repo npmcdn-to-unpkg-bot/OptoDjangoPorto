@@ -1,5 +1,4 @@
 {% load staticfiles %}
-
 {% load i18n %}
 
 <header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": true}'>
@@ -31,46 +30,12 @@
 									<a href="{% url 'about_us' %}"><i class="fa fa-angle-right"></i> About Us</a>
 									<a href="{% url 'contact_us' %}"><i class="fa fa-angle-right"></i> Contact Us</a>
 								</li>
-								<li>
 
-								{% blocktrans %}"Hello boy!"{% endblocktrans %}
-
-								<form action="/i18n/setlang/" method="post">
-
-									{% csrf_token %}
-
-									<input name="next" type="hidden" value="#" />
-
-									<select name="language">
-
-									{% for lang in LANGUAGES %}
-
-										<option value="{{ lang.0 }}">{{ lang.1 }}</option>
-
-									{% endfor %}
-
-									</select>
-
-									<input type="submit" />
-
-								</form>
-
+								<li class="hidden-xs">
+									<span itemprop="telephone" class="ws-nowrap"><i class="fa fa-phone"></i><a href="tel:+41219482080" target="_blank">+41 21 948 20 80</a></span>
 								</li>
 								<li class="hidden-xs">
-									<a href="#" class="dropdown-menu-toggle" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-										<img src="{% static 'media/img/blank.gif' %}" class="flag flag-gb" alt="English" /> English
-										<i class="fa fa-angle-down"></i>
-									</a>
-									<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownLanguage">
-										<li><a href="#"><img src="{% static 'media/img/blank.gif' %}" class="flag flag-fr" alt="Français" /> Français</a></li>
-										<li><a href="#"><img src="{% static 'media/img/blank.gif' %}" class="flag flag-de" alt="Deutsch" /> Deutsch</a></li>
-									</ul>
-								</li>
-								<li class="hidden-xs">
-									<span class="ws-nowrap"><i class="fa fa-phone"></i><a href="tel:+41-21-948-20-80">+41 21 948 20 80</a></span>
-								</li>
-								<li class="hidden-xs">
-									<span class="ws-nowrap"><i class="fa fa-fax"></i><a href="tel:+41-21-948-20-88">+41 21 948 20 88</a></span>
+									<span class="ws-nowrap"><i class="fa fa-fax"></i><a href="tel:+41219482088">+41 21 948 20 88</a></span>
 								</li>
 							</ul>
 						</nav>
@@ -169,6 +134,9 @@
 												Contact Us
 											</a>
 										</li>
+										<li>
+											<a href="#" aria-hidden="true" data-toggle="modal" data-target="#formModal" title="Language-selection"><i class="fa fa-2x fa-globe"></i></a>
+										</li>
 									</ul>
 								</nav>
 							</div>
@@ -179,3 +147,35 @@
 		</div>
 	</div>
 </header>
+<div class="modal " id="formModal" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title" id="smallModalLabel"><strong>Choose</strong> prefered Language</h4>
+			</div>
+			<div class="modal-body">
+				<form action="/i18n/setlang/" method="post">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="#" />
+					<div class="input-group input-search">
+						<select class="form-control input-sm mb-none" name="language">
+							{% get_current_language as LANGUAGE_CODE %}
+							{% get_available_languages as LANGUAGES %}
+							{% get_language_info_list for LANGUAGES as languages %}
+							{% for language in languages %}
+								<option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+									{{ language.name_local }} ({{ language.code }})
+								</option>
+							{% endfor %}
+						</select>
+						<span class="input-group-btn ">
+							<button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-chevron-right"></i></button>
+						</span>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>

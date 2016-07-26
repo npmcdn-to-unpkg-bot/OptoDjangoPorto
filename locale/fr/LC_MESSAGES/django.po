@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-25 16:43+0200\n"
+"POT-Creation-Date: 2016-07-26 15:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,24 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-
-#: .\OptoDjangoPorto\settings.py:154
-msgid "French"
-msgstr "Français"
-
-#: .\OptoDjangoPorto\settings.py:155
-msgid "English"
-msgstr "Anglais"
-
-#: .\OptoDjangoPorto\settings.py:156
-msgid "German"
-msgstr "Allemand"
-
-#: .\templates\_topnav.html:36
-#, fuzzy
-#| msgid "Hello boy!"
-msgid "\"Hello boy!\""
-msgstr "Salut mec!"
 
 #: .\templates\apps\newsletter\subscription_subscribe.html:5
 #: .\templates\apps\newsletter\subscription_subscribe.html:8
@@ -63,8 +45,6 @@ msgid "Years in Business"
 msgstr "Années dans le Business"
 
 #: .\templates\apps\static_pages\landing_page\_#_counter_section.html:23
-#, fuzzy
-#| msgid "Projects Developed"
 msgid "Projects Developed each year"
 msgstr "Projet dévelopé chaque année"
 
@@ -221,8 +201,6 @@ msgid "Expertise"
 msgstr ""
 
 #: .\templates\apps\static_pages\landing_page\_4_services.html:33
-#, fuzzy
-#| msgid "This location is dedicated for EPAPER Hide and Sneak players."
 msgid "This location is dedicated for EPAPER Hide and Sneak players "
 msgstr "Cette endroit est dédié aux Joueurs EPAPER de cache cache."
 
