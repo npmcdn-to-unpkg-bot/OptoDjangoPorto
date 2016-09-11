@@ -38,7 +38,7 @@ npm install tablefilter --save
 npm install tablefilter@next --save
 ```
 * If you don't use `npm`, you can also 
-[access these files on npmcdn](https://npmcdn.com/tablefilter/), download them 
+[access these files on unpkg](https://unpkg.com/tablefilter/), download them 
 or point your package manager to them.
 
 ## Setup
